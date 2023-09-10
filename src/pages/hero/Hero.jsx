@@ -27,16 +27,17 @@ const Hero = () => {
       </div>
       <Carousel />
       <div className='welcomeContainer'>
-        <img src={lineImg} alt='line Img' />
-        <div className='welcomeGreeting'>Welcome To KFC!</div>
+        <img src={lineImg} alt='line Img' className='lineImg' />
+        <div className='welcomeGreeting'>WELCOME TO KFC!</div>
       </div>
-      <div className='categoriesLeft'>
-        <h2>BROWSE CATEGORIES</h2>
+      <div className='categoriesContainer'>
+        <div className='categoriesLeft'>
+          <h3>BROWSE CATEGORIES</h3>
+        </div>
+        <div className='categoriesRight'>
+          <div className='horizontalLine'></div>
+        </div>
       </div>
-      <div className='categoriesRight'>
-        <div className='horizontalLine'></div>
-      </div>
-
       <div className='categorySection'>
         <div className='categoryCards'>
           {data.map((item) => {
