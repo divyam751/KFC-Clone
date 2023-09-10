@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Style.css";
 
 const Carousel = () => {
@@ -15,15 +15,18 @@ const Carousel = () => {
 
   const [imgNumber, setImgNumber] = useState(0);
   let i = 0;
+
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (i === arr.length) {
         i = 0;
       }
       setImgNumber(i);
       i++;
-      console.log(i);
-    }, 1000);
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (

@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Style.css";
 import Carousel from "../../components/carousel/Carousel";
+import lineImg from "../../assets/mobileLogo.png";
+import axios from "axios";
+import Categories from "../../components/categoriesCard/Categories";
 
 const Hero = () => {
+  const [data, setData] = useState([]);
+  const fethData = () => {
+    axios
+      .get("http://localhost:8080/categories")
+      .then((res) => setData(res.data));
+  };
+
+  useEffect(() => {
+    fethData();
+  }, []);
+  console.log(data);
   return (
     <div className='hero-Main-Contianer'>
       <div className='headerBottom'>
@@ -12,6 +26,28 @@ const Hero = () => {
         <button className='startOrderBtn'>Start Order</button>
       </div>
       <Carousel />
+      <div className='welcomeContainer'>
+        <img src={lineImg} alt='line Img' />
+        <div className='welcomeGreeting'>Welcome To KFC!</div>
+      </div>
+      <div className='categoriesLeft'>
+        <h2>BROWSE CATEGORIES</h2>
+      </div>
+      <div className='categoriesRight'>
+        <div className='horizontalLine'></div>
+      </div>
+
+      <div className='categorySection'>
+        <div className='categoryCards'>
+          {data.map((item) => {
+            return (
+              <div key={item.id}>
+                <Categories url={item.url} categoryName={item.categoryName} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

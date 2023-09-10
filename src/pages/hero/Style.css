@@ -2,7 +2,7 @@
 
 .hero-Main-Contianer {
     padding-top: 156px;
-    height: 100vh;
+    width: 100%;
 }
 
 .headerBottom {
@@ -12,6 +12,7 @@
     background-color: #202124;
     color: white;
     height: 70px;
+    width: 100%;
     gap: 10px;
 }
 
@@ -31,4 +32,44 @@
     background-color: #e4002b;
     color: #fff;
     border-color: #e4002b;
+}
+
+.welcomeContainer {
+    background-color: #F8F7F5;
+    display: block;
+    height: 200px;
+}
+
+.categorySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryCards {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+}
+
+@media only screen and (max-width : 1024px) {
+    .categoryCards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .categoryCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width : 470px) {
+    .categoryCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
