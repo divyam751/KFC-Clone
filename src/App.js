@@ -3,6 +3,7 @@ import "./App.css";
 
 import Navbar from "./pages/navbar/Navbar";
 import CustomDrawer from "./components/drawer/Drawer";
+import Hero from "./pages/hero/Hero";
 
 function App() {
   const [burger, setBurger] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           cartIconCount={cartIconCount}
         />
       )}
+      <Hero />
     </div>
   );
 }

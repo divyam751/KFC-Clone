@@ -1,0 +1,34 @@
+@import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
+
+.hero-Main-Contianer {
+    padding-top: 156px;
+    height: 100vh;
+}
+
+.headerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202124;
+    color: white;
+    height: 70px;
+    gap: 10px;
+}
+
+.heroBottom-text {
+    font-family: "National 2 Condensed Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .5px;
+}
+
+.startOrderBtn {
+
+    padding: 7px 25px;
+    border-radius: 15px;
+    background-color: #e4002b;
+    color: #fff;
+    border-color: #e4002b;
+}
