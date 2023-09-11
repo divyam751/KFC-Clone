@@ -8,7 +8,7 @@ const Home = () => {
   const [cardData, setCardData] = useState([]);
   const fetchData = () => {
     axios
-      .get("http://localhost:8080/cardsData")
+      .get("https://kfc-2yef.onrender.com/cardsData")
       .then((res) => setCardData(res.data));
   };
 

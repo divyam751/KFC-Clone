@@ -9,7 +9,7 @@ const Hero = () => {
   const [data, setData] = useState([]);
   const fethData = () => {
     axios
-      .get("http://localhost:8080/categories")
+      .get("https://kfc-2yef.onrender.com/categories")
       .then((res) => setData(res.data));
   };
 
