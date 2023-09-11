@@ -1,0 +1,6 @@
+.homeMainContianer {
+    display: flex;
+    flex-direction: column;
+    background-color: #202124;
+    /* min-height: 100vh; */
+}
