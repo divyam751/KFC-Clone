@@ -159,4 +159,15 @@
     .welcomeContainer {
         padding-left: 20px;
     }
+
+    .headerBottom {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width : 325px) {
+    .headerBottom {
+        padding-top: 40px;
+    }
 }
