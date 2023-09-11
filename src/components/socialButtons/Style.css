@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.MainButtonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.googleButton {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 160px;
+    border: 2px solid;
+    /* margin-left: 400px; */
+    padding: 5px;
+    background-color: #202124;
+    color: white;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.textSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media only screen and (max-width: 425px) {
+    .MainButtonContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .MainButtonContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

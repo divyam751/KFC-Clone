@@ -17,8 +17,8 @@ const Home = () => {
   }, []);
   return (
     <div className='homeMainContianer'>
-      {/* <img src={redLines} alt='' />
-      <div className='offersDeals'>OFFERS & DEALS</div> */}
+      <img src={redLines} alt='redLine' className='redLineLogo' />
+      <div className='offersDeals'>OFFERS & DEALS</div>
 
       <OffersCards cardData={cardData} />
     </div>

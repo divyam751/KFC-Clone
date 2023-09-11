@@ -68,7 +68,7 @@
     display: flex;
     align-items: flex-start;
     font-size: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
     font-family: "National 2 Condensed Bold";
 
 }
@@ -136,6 +136,11 @@
 
     .welcomeContainer {
         padding-left: 40px;
+    }
+
+    .headerBottom {
+        padding-top: 20px;
+        flex-direction: column;
     }
 }
 

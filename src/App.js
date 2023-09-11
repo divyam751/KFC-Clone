@@ -5,6 +5,7 @@ import Navbar from "./pages/navbar/Navbar";
 import CustomDrawer from "./components/drawer/Drawer";
 import Hero from "./pages/hero/Hero";
 import Home from "./pages/home/Home.jsx";
+import Footer from "./pages/footer/Footer";
 
 function App() {
   const [burger, setBurger] = useState(false);
@@ -32,6 +33,7 @@ function App() {
       )}
       <Hero />
       <Home />
+      <Footer />
     </div>
   );
 }

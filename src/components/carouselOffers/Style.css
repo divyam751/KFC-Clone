@@ -12,6 +12,7 @@
     align-items: center;
     padding: 50px;
     overflow: hidden;
+    margin-top: -200px;
 }
 
 .OfferSliderButtonsPrv {
@@ -40,7 +41,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-left: 50px;
-
 }
 
 .SingleCardBlock {
@@ -83,15 +83,10 @@
 
 }
 
-@media only screen and (max-width: 1024px) {}
-
-@media only screen and (max-width: 768px) {}
-
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
     .offerCardsMainContainer {
         display: flex;
         padding: 0;
-
     }
 
     .OfferSliderButtonsPrv {
@@ -100,13 +95,28 @@
 
     .OfferSliderButtonsNxt {
         margin-left: 50px;
-
-
     }
 
     .OfferCardSection {
-
         display: block;
+    }
+}
 
+@media only screen and (max-width: 425px) {
+    .offerCardsMainContainer {
+        display: flex;
+        padding: 0;
+    }
+
+    .OfferSliderButtonsPrv {
+        margin-right: -30px;
+    }
+
+    .OfferSliderButtonsNxt {
+        margin-left: 50px;
+    }
+
+    .OfferCardSection {
+        display: block;
     }
 }

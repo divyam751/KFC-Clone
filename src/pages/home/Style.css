@@ -1,6 +1,23 @@
+@import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
+
 .homeMainContianer {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     background-color: #202124;
-    /* min-height: 100vh; */
+}
+
+.redLineLogo {
+    width: 80px;
+    margin-left: 100px;
+}
+
+.offersDeals {
+    color: white;
+    font-size: 40px;
+    text-align: start;
+    padding-left: 100px;
+    font-family: "National 2 Condensed Bold";
+    padding-top: 20px;
+    padding-bottom: 40px;
 }

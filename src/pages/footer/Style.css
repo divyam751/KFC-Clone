@@ -1,0 +1,134 @@
+.footer-parentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #202124;
+}
+
+.MainFooterContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 200px;
+    margin-top: -100px;
+}
+
+.footerLogo {
+    padding: 20px 0px 20px 0px;
+}
+
+.footerSection {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+}
+
+.footerUlTitle {
+    display: flex;
+}
+
+.footerUlTitle ul {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 20px 0px 20px 0px;
+    color: white;
+    width: 140px;
+    font-size: small;
+}
+
+.footerUlTitle ul li {
+    list-style: none;
+    align-items: start;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.footerUlTitle ul li>a {
+    list-style: none;
+    align-items: start;
+    color: white;
+    text-decoration: none;
+}
+
+.findStore {
+    display: flex;
+    align-items: flex-start;
+    width: 100px;
+    font-size: small;
+    padding: 20px 0px 20px 0px;
+}
+
+.findStore a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerSocialButtons {
+    padding: 20px 0px 20px 0px;
+}
+
+.footerBottomSection {
+    color: white;
+    margin-top: -40px;
+    padding-bottom: 40px;
+    font-size: small;
+    display: flex;
+}
+
+@media only screen and (max-width: 1440px) {
+    .footerBottomSection {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .footerSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .findStore {
+
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .footerSection {
+        flex-direction: column;
+    }
+
+    .findStore {
+
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footerBottomSection {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .footerUlTitle {
+        flex-direction: column;
+    }
+
+    .footerSection {
+        flex-direction: column;
+    }
+
+    .findStore {
+
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footerBottomSection {
+        flex-direction: column;
+    }
+}
