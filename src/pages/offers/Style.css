@@ -1,0 +1,249 @@
+@import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
+
+.offer-Main-Contianer {
+    padding-top: 105px;
+    width: 100%;
+    border: 4px;
+    height: fit-content;
+    padding-bottom: 100px;
+}
+
+.offer-headerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202124;
+    color: white;
+    height: 70px;
+    width: 100%;
+    gap: 10px;
+}
+
+.offerBottom-text {
+    font-family: "National 2 Condensed Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .5px;
+}
+
+.offer-startOrderBtn {
+
+    padding: 14px 50px;
+    border-radius: 35px;
+    background-color: #e4002b;
+    color: #fff;
+    border-color: #e4002b;
+}
+
+.deals-header-image {
+    width: 100%;
+    height: 280px;
+    background-color: #202124;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://online.kfc.co.in/static/media/offer_deals_banner.777f20e1.svg");
+}
+
+.deals-image-text {
+
+    color: white;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: .01px;
+    text-transform: uppercase;
+}
+
+.nationalOfferContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 180px;
+}
+
+.linesLogo {
+    width: 50px;
+}
+
+.nationalOfferText {
+    display: flex;
+    align-items: flex-start;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    font-family: "National 2 Condensed Bold";
+}
+
+.offer-categorySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+}
+
+.offer-categoryCards {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+}
+
+/* Cards  */
+.offer-cardStructure {
+    background-image: url("https://online.kfc.co.in/static/media/Native_select%20a%20kfc_grey%20image.6e97ff02.svg");
+    height: 335px;
+    width: 275px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px 25px 0px 25px;
+    letter-spacing: .1px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+    background-color: #202124;
+}
+
+.offer-card2Structure {
+    height: 415px;
+    width: 305px;
+    background-color: #E4002B;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: .1px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    margin-top: 7px;
+    border-radius: 5px;
+    margin-left: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+}
+
+.offer-card-button {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 50px 15px 50px;
+}
+
+/* Map Cards */
+.offer-SingleCardBlock {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+}
+
+.offer-singleCardOffer {
+    display: flex;
+    flex-direction: column;
+    width: 305px;
+    background-color: white;
+    height: 395px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.offer-cardButtonSection {
+    position: "absolute";
+    background-color: "white";
+    width: "290px";
+    padding: "5px";
+    align-items: "center";
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: -38px;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.offer-cardButtonOffer {
+    border-radius: "25px";
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 35px;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .offer-categoryCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-categorySection {
+        margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .nationalOfferContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+    }
+
+    .offer-categoryCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-headerBottom {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        flex-direction: column;
+    }
+
+    .offer-startOrderBtn {
+
+        padding: 7px 25px;
+        border-radius: 25px;
+        background-color: #e4002b;
+        color: #fff;
+        border-color: #e4002b;
+    }
+}
+
+@media only screen and (max-width : 470px) {
+    .offer-categoryCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .offer-categoriesLeft {
+        padding-left: 20px;
+    }
+
+
+    .offer-headerBottom {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+
+    .nationalOfferContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width : 325px) {
+    .offer-headerBottom {
+        padding-top: 40px;
+    }
+}

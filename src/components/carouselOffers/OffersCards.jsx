@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Style.css";
+import { useNavigate } from "react-router-dom";
 
 const OffersCards = ({ cardData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -43,8 +45,11 @@ const OffersCards = ({ cardData }) => {
                   </div>
                   <div>{card.text}</div>
                 </div>
-                <div className='cardButtonSection'>
-                  <a href='#'>View Details</a>
+                <div
+                  className='cardButtonSection'
+                  onClick={() => navigate("/offers")}
+                >
+                  View Details
                   <button className='cardButtonOffer'>Redeem</button>
                 </div>
               </div>
