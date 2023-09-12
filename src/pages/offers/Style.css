@@ -1,10 +1,8 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
-/* font-family: "National 2 Condensed Bold"; */
+
 .offer-Body {
     width: 100%;
-    height: 200px;
-    background-color: teal;
     padding-top: 100px;
 }
 
@@ -38,7 +36,8 @@
     justify-content: center;
     color: white;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 90px;
+    font-family: "National 2 Condensed Bold";
 }
 
 .offer-cardsSection {
@@ -54,12 +53,13 @@
     flex-direction: column;
     width: 80%;
     height: 120px;
-    font-size: 30px;
+    font-size: 55px;
     font-weight: bolder;
     align-items: flex-start;
     justify-content: space-between;
     gap: 30px;
     letter-spacing: .01px;
+    font-family: "National 2 Condensed Bold";
 }
 
 .offer-3lingLogo {
@@ -79,6 +79,7 @@
     width: 80%;
     min-height: 100vh;
     padding-bottom: 100px;
+    row-gap: 30px;
 }
 
 .offer-box1 {
