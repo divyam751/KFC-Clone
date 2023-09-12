@@ -3,9 +3,8 @@ import "./App.css";
 
 import Navbar from "./pages/navbar/Navbar";
 import CustomDrawer from "./components/drawer/Drawer";
-import Hero from "./pages/hero/Hero";
-import Home from "./pages/home/Home.jsx";
 import Footer from "./pages/footer/Footer";
+import AllRoutes from "./routes/AllRoutes";
 
 function App() {
   const [burger, setBurger] = useState(false);
@@ -31,8 +30,7 @@ function App() {
           cartIconCount={cartIconCount}
         />
       )}
-      <Hero />
-      <Home />
+      <AllRoutes />
       <Footer />
     </div>
   );
