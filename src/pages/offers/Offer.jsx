@@ -4,6 +4,7 @@ import axios from "axios";
 import linesLogo from "../../assets/mobileLogo.png";
 
 import { useNavigate } from "react-router-dom";
+import { FcHome } from "react-icons/fc";
 
 const Offer = () => {
   const [cardData, setCardData] = useState([]);
@@ -19,60 +20,55 @@ const Offer = () => {
   }, []);
   console.log(cardData);
   return (
-    <div className='offer-Main-Contianer'>
-      <div className='offer-headerBottom'>
-        <div className='offerBottom-text'>
-          LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
+    <div className='offer-Body'>
+      <div className='offer-headerSection'>
+        LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
+        <button className='offer-headerSection-button'>Start Now</button>
+      </div>
+      <div className='offer-bannerSection'>DEALS & OFFERS</div>
+      <div className='offer-cardsSection'>
+        <div className='offer-headingSection'>
+          <img src={linesLogo} alt='logo' className='offer-3lingLogo' />
+          NATIONAL OFFERS
         </div>
-        <button className='offer-startOrderBtn'>Start Order</button>
-      </div>
-      <div className='deals-header-image'>
-        <h3 class='deals-image-text'>Deals &amp; Offers</h3>
-      </div>
-      <div className='nationalOfferContainer'>
-        <img src={linesLogo} alt='line Img' className='linesLogo' />
-        <div className='nationalOfferText'>NATIONAL OFFERS</div>
-      </div>
 
-      <div className='offer-categorySection'>
-        <div className='offer-categoryCards'>
-          <div className='offer-cardStructure'>
-            <h2>SELECT A KFC TO SEE LOCAL OFFERS</h2>
-            <button className='offer-card-button'>Find a KFC</button>
-          </div>
-          <div className='offer-card2Structure'>
-            <h1>SIGN IN TO SEE MORE EXCLUSIVE OFFERS & DEALS</h1>
-            <button className='offer-card-button'>Login</button>
+        <div className='offer-blankSpace'></div>
+        <div className='offer-cards-Box'>
+          <div className='offer-box1'>
+            <FcHome size={60} />
+            SELECT A KFC TO SEE LOCAL OFFERS
+            <button className='offer-cards-button'>Find a KFC</button>
           </div>
 
-          {cardData.map((card, index) => {
+          <div className='offer-box2'>
+            SIGN IN TO SEE MORE EXCLUSIVE OFFERS & DEALS
+            <button
+              className='offer-cards-button'
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </button>
+          </div>
+
+          {/* Offer Boxs start from  */}
+          {cardData.map((singleCard, index) => {
             return (
-              <div className='offer-categorySection'>
-                <div className='offer-SingleCardBlock'>
-                  <div className='offer-singleCardOffer'>
-                    <img
-                      src={card.url}
-                      alt={card.text}
-                      style={{ marginBottom: "2px" }}
-                    />
-                    <div
-                      style={{
-                        color: "red",
-                        fontWeight: "bold",
-                        fontSize: "40px",
-                      }}
-                    >
-                      {card.offer}
-                    </div>
-                    <div>{card.text}</div>
-                  </div>
-                  <div
-                    className='offer-cardButtonSection'
-                    onClick={() => navigate("/offers")}
+              <div className='offer-box3' key={index}>
+                <img
+                  src={singleCard.url}
+                  alt='box3 Img'
+                  className='offer-box3-img'
+                />
+                <h1 className='offer-box3-title'>{singleCard.offer}</h1>
+                <p className='offer-box3-text'>{singleCard.text}</p>
+                <div className='offer-box3-buttonSection'>
+                  <h5
+                    onClick={() => navigate("/menu")}
+                    style={{ cursor: "pointer" }}
                   >
                     View Details
-                    <button className='offer-cardButtonOffer'>Redeem</button>
-                  </div>
+                  </h5>
+                  <button className='offer-box3-button'>Redeem</button>
                 </div>
               </div>
             );

@@ -32,7 +32,7 @@ function App() {
         />
       )}
       <AllRoutes />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,14 +1,14 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
-.offer-Main-Contianer {
-    padding-top: 105px;
+/* font-family: "National 2 Condensed Bold"; */
+.offer-Body {
     width: 100%;
-    border: 4px;
-    height: fit-content;
-    padding-bottom: 100px;
+    height: 200px;
+    background-color: teal;
+    padding-top: 100px;
 }
 
-.offer-headerBottom {
+.offer-headerSection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,234 +16,180 @@
     color: white;
     height: 70px;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 
-.offerBottom-text {
-    font-family: "National 2 Condensed Bold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: .5px;
+.offer-headerSection-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
 }
 
-.offer-startOrderBtn {
-
-    padding: 14px 50px;
-    border-radius: 35px;
-    background-color: #e4002b;
-    color: #fff;
-    border-color: #e4002b;
-}
-
-.deals-header-image {
+.offer-bannerSection {
     width: 100%;
     height: 280px;
-    background-color: #202124;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url("https://online.kfc.co.in/static/media/offer_deals_banner.777f20e1.svg");
-}
-
-.deals-image-text {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-weight: 700;
-    font-size: 64px;
-    text-align: center;
-    letter-spacing: .01px;
-    text-transform: uppercase;
+    font-size: 60px;
 }
 
-.nationalOfferContainer {
+.offer-cardsSection {
     display: flex;
     flex-direction: column;
-    padding-left: 180px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
-.linesLogo {
-    width: 50px;
-}
-
-.nationalOfferText {
+.offer-headingSection {
     display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 120px;
+    font-size: 30px;
+    font-weight: bolder;
     align-items: flex-start;
-    font-size: 50px;
-    padding-top: 20px;
-    padding-bottom: 80px;
-    font-family: "National 2 Condensed Bold";
+    justify-content: space-between;
+    gap: 30px;
+    letter-spacing: .01px;
 }
 
-.offer-categorySection {
+.offer-3lingLogo {
+    height: 40px;
+}
+
+.offer-blankSpace {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 60px;
+    width: 80%;
+    height: 60px;
+    background-color: white;
 }
 
-.offer-categoryCards {
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-}
-
-/* Cards  */
-.offer-cardStructure {
-    background-image: url("https://online.kfc.co.in/static/media/Native_select%20a%20kfc_grey%20image.6e97ff02.svg");
-    height: 335px;
-    width: 275px;
-    color: white;
+.offer-cards-Box {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 80px 25px 0px 25px;
-    letter-spacing: .1px;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 20px;
+    flex-wrap: wrap;
+    width: 80%;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.offer-box1 {
+    height: 400px;
+    width: 300px;
     background-color: #202124;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.offer-card2Structure {
-    height: 415px;
-    width: 305px;
+.offer-box2 {
+    height: 400px;
+    width: 300px;
     background-color: #E4002B;
     color: white;
+    font-size: 30px;
+    font-weight: bold;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    letter-spacing: .1px;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    margin-top: 7px;
-    border-radius: 5px;
-    margin-left: 15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 20px;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.offer-card-button {
+.offer-cards-button {
+    padding: 10px 30px 10px 30px;
     background-color: transparent;
-    border-color: white;
     color: white;
+    border-color: white;
     border-radius: 25px;
-    padding: 15px 50px 15px 50px;
 }
 
-/* Map Cards */
-.offer-SingleCardBlock {
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 20px;
-}
-
-.offer-singleCardOffer {
-    display: flex;
-    flex-direction: column;
-    width: 305px;
+.offer-cards-button:hover {
     background-color: white;
-    height: 395px;
-    overflow: hidden;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.offer-cardButtonSection {
-    position: "absolute";
-    background-color: "white";
-    width: "290px";
-    padding: "5px";
-    align-items: "center";
-    display: flex;
-    justify-content: space-evenly;
-    background-color: white;
-    margin-top: -38px;
-    padding: 10px;
-    border-radius: 0px 0px 20px 20px;
-    border: none;
+    color: black;
     cursor: pointer;
-
 }
 
-.offer-cardButtonOffer {
-    border-radius: "25px";
-    padding: 10px 20px;
+
+.offer-box3 {
+    height: 430px;
+    width: 330px;
     background-color: white;
-    border-radius: 35px;
-}
+    border-radius: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-
-@media only screen and (max-width : 1024px) {
-    .offer-categoryCards {
-        grid-template-columns: repeat(2, 1fr);
+    .offer-box3-img {
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
     }
 
-    .offer-categorySection {
-        margin-left: -20px;
+    .offer-box3-title {
+        color: red;
     }
-}
 
-@media only screen and (max-width : 768px) {
-    .nationalOfferContainer {
+    .offer-box3-text {
+        overflow: hidden;
+    }
+
+    .offer-box3-buttonSection {
         display: flex;
-        flex-direction: column;
-        padding-left: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        z-index: 1;
+        height: 60px;
+        border-radius: 0px 0px 30px 30px;
+        position: relative;
+        margin-top: -18px;
     }
 
-    .offer-categoryCards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .offer-headerBottom {
-        padding-top: 10px;
-        padding-bottom: 5px;
-        flex-direction: column;
-    }
-
-    .offer-startOrderBtn {
-
-        padding: 7px 25px;
+    .offer-box3-button {
+        padding: 10px 30px 10px 30px;
+        background-color: transparent;
+        color: black;
+        border-color: black;
         border-radius: 25px;
-        background-color: #e4002b;
-        color: #fff;
-        border-color: #e4002b;
+        cursor: pointer;
     }
+
+    .offer-box3-button:hover {
+        background-color: black;
+        color: white;
+    }
+
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media only screen and (max-width : 470px) {
-    .offer-categoryCards {
-        display: flex;
-        flex-direction: column;
+
+@media only screen and (max-width:1382px) {
+    .offer-cards-Box {
         align-items: center;
         justify-content: center;
     }
 
-    .offer-categoriesLeft {
-        padding-left: 20px;
-    }
-
-
-    .offer-headerBottom {
-        padding-top: 20px;
-        flex-direction: column;
-    }
-
-    .nationalOfferContainer {
-        display: flex;
-        flex-direction: column;
-        padding-left: 20px;
-    }
-}
-
-@media only screen and (max-width : 325px) {
-    .offer-headerBottom {
-        padding-top: 40px;
-    }
 }
