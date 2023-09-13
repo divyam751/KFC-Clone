@@ -1,10 +1,8 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
-
 .menu-Body {
     width: 100%;
     padding-top: 100px;
-    background-color: teal;
     height: 100vh;
 }
 
@@ -31,8 +29,6 @@
 
 .menu-parentBox {
     width: 100%;
-    /* height: 100vh; */
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,9 +36,7 @@
 
 .menu-childBox {
     width: 86%;
-    /* height: 100vh; */
     display: flex;
-    background-color: pink;
 }
 
 .menu-childBox-left-wrapper {
@@ -51,7 +45,6 @@
 
 .menu-childBox-left {
     height: 100vh;
-    background-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -83,7 +76,6 @@
 
 .menu-childBox-left-fixed {
     height: 100vh;
-    background-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -93,25 +85,15 @@
     margin-top: -70px;
 }
 
-
-
-
-
-
 .menu-childBox-right {
     width: 70%;
-    background-color: teal;
     display: flex;
     flex-direction: column;
-    /* margin-left: 30%; */
-    /* padding-left: 30%; */
     min-height: 100vh;
 
     .menu-searchSection {
         width: 100%;
         height: 100px;
-        background-color: white;
-        /* margin-bottom: 50px; */
         border-bottom: 2px solid;
         display: flex;
         justify-content: flex-start;
@@ -122,7 +104,6 @@
             width: 200px;
             height: 40px;
             border-radius: 30px;
-            border: 2px solid gray;
             display: flex;
             padding-left: 10px;
             justify-content: flex-start;
@@ -138,10 +119,6 @@
                 padding-right: 10px;
                 outline: none;
             }
-
-
-
-
         }
 
         .menu-searchBox:hover {
@@ -149,14 +126,39 @@
         }
     }
 
-
     .menu-grandChild {
         width: 100%;
-        height: 700px;
-        /* padding-top: 120px; */
-        /* background-color: pink; */
+        min-height: 100vh;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F8F7F5;
+        gap: 70px;
+        align-items: flex-start;
+        margin-top: 50px;
+        padding-top: 40px;
+
     }
 
+    .menu-childCards {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .menu-childCards-box {
+        display: flex;
+        width: 96%;
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        align-items: flex-start;
+        /* flex-wrap: wrap; */
+        row-gap: 50px;
+    }
 }
 
 .menu-menuCards-Section {
@@ -164,7 +166,178 @@
     flex-direction: column;
 }
 
-.menu-childBox-right :nth-child(even) {
-    background-color: pink;
-    border: 2px dashed;
+.menu-mob-navbar {
+    display: none;
+}
+
+@media only screen and (min-width : 1200px) {
+    .menu-childCards-box {
+        flex-wrap: wrap;
+    }
+
+    .menu-childBox {
+        width: 96%;
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width : 1024px) {
+    .menu-childBox {
+        width: 96%;
+        padding-top: 10px;
+    }
+
+    .menu-childCards-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .menu-headerSection {
+        display: none;
+    }
+
+
+    .menu-childBox {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-childBox-left-ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        gap: 10px;
+        justify-content: flex-end;
+
+    }
+
+
+    .menu-childBox-left-wrapper {
+        display: none;
+    }
+
+    .menu-childBox-left {
+        height: fit-content;
+        padding-top: 20px;
+    }
+
+
+
+    .menu-childBox-right {
+        width: 100%;
+
+        .menu-searchSection {
+            width: 100%;
+            height: 60px;
+
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2px;
+
+            .menu-searchBox {
+                width: 200px;
+                height: 40px;
+                border-radius: 30px;
+                border: 2px solid gray;
+                display: flex;
+                padding-left: 10px;
+                justify-content: flex-start;
+                align-items: center;
+
+                .menu-search-input {
+                    border: none;
+                    background-color: transparent;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px 30px 30px 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    outline: none;
+                }
+            }
+
+            .menu-searchBox:hover {
+                border-color: orange;
+            }
+        }
+
+
+        .menu-grandChild {
+            width: 100%;
+            min-height: 100vh;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            padding-top: 40px;
+        }
+
+        .menu-childCards {
+            width: 100%;
+            /* border: 2px dashed; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    .menu-mob-navbar {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+
+        .menu-childBox-left-ul {
+            list-style: none;
+            padding: 4px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .menu-childBox-left-links {
+            display: inline-block;
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        .menu-searchIconBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1px;
+        }
+
+    }
+
+
+
+}
+
+@media only screen and (max-width:425px) {
+    .menu-scroll-container {
+        overflow-x: auto;
+
+        white-space: nowrap;
+        width: 100%;
+
+    }
+
+
+
+    .menu-childCards-box {
+        display: inline-block;
+        overflow-y: auto;
+        flex-wrap: nowrap;
+    }
+
+    .menu-periperi {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
 }

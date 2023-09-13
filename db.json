@@ -78,5 +78,43 @@
       "offer": "1 Pc free Veg...",
       "text": "1 Pc free Veg Zinger on a cart value of 499 or above on first order. Only for registered users"
     }
+  ],
+  "peri-peri-chiken": [
+    {
+      "id": 1,
+      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002144.jpg?ver=33.22",
+      "title": "5 Leg Pc & 2 Dips Bucket",
+      "varity": "Non veg",
+      "serving": " Serves 2",
+      "price": "519.05",
+      "description": "Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)"
+    },
+    {
+      "id": 2,
+      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002319.jpg?ver=33.22",
+      "title": "Peri 10 Pc Chicken Strips & 2 Dips",
+      "varity": "Non veg",
+      "serving": " Serves 2",
+      "price": "499.05",
+      "description": "Save 24% on 10 Spicy Peri Peri chicken boneless strips with 2 Dips"
+    },
+    {
+      "id": 3,
+      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002141.jpg?ver=33.22",
+      "title": "Peri Peri 10 Leg Pc & 4 Dips",
+      "varity": "Non veg",
+      "serving": " Serves 3-4",
+      "price": "948.57",
+      "description": "Save Rs. 334 on 10 Peri Peri Leg Pieces & 4 Dips (20 gm each)"
+    },
+    {
+      "id": 4,
+      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002158.jpg?ver=33.22",
+      "title": "Peri Peri 6pc Chicken Strips",
+      "varity": "Non veg",
+      "serving": " Serves 2",
+      "price": "299.05",
+      "description": "Save 16% on 6 Spicy Peri Peri chicken boneless strips"
+    }
   ]
 }

@@ -1,0 +1,60 @@
+.menu-childCardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 400px;
+    min-height: 400px;
+    padding-bottom: 60px;
+    margin-right: 30px;
+}
+
+.offer-cardImg {
+    width: 100%;
+}
+
+.offer-cardCategory {
+    display: flex;
+    gap: 5px;
+}
+
+.offer-cardCategory-text {
+    font-size: 15px;
+    text-align: start;
+}
+
+.offer-button-add {
+    width: 96%;
+    display: flex;
+    padding: 5px;
+}
+
+.offer-card-addToCart {
+    background-color: red;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    .offee-cart-buttonImg {
+        width: 30px;
+    }
+}
+
+.offer-card-addToCart:hover {
+    background-color: teal;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1024px) {
+    .menu-childCardBody {
+        width: 300px;
+    }
+
+    .offer-cardImg {
+        width: 300px;
+    }
+}
