@@ -1,0 +1,170 @@
+@import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
+
+
+.menu-Body {
+    width: 100%;
+    padding-top: 100px;
+    background-color: teal;
+    height: 100vh;
+}
+
+.menu-headerSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202124;
+    color: white;
+    height: 70px;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu-headerSection-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+}
+
+.menu-parentBox {
+    width: 100%;
+    /* height: 100vh; */
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-childBox {
+    width: 86%;
+    /* height: 100vh; */
+    display: flex;
+    background-color: pink;
+}
+
+.menu-childBox-left-wrapper {
+    width: 30%;
+}
+
+.menu-childBox-left {
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.menu-linesLogo {
+    width: 70px;
+}
+
+.menu-childBox-left-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.menu-childBox-left-ul li {
+    list-style: none;
+}
+
+.menu-childBox-left-links {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.menu-childBox-left-fixed {
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    position: fixed;
+    margin-top: -70px;
+}
+
+
+
+
+
+
+.menu-childBox-right {
+    width: 70%;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 30%; */
+    /* padding-left: 30%; */
+    min-height: 100vh;
+
+    .menu-searchSection {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        /* margin-bottom: 50px; */
+        border-bottom: 2px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 20px;
+
+        .menu-searchBox {
+            width: 200px;
+            height: 40px;
+            border-radius: 30px;
+            border: 2px solid gray;
+            display: flex;
+            padding-left: 10px;
+            justify-content: flex-start;
+            align-items: center;
+
+            .menu-search-input {
+                border: none;
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                border-radius: 0px 30px 30px 0px;
+                padding-left: 10px;
+                padding-right: 10px;
+                outline: none;
+            }
+
+
+
+
+        }
+
+        .menu-searchBox:hover {
+            border-color: orange;
+        }
+    }
+
+
+    .menu-grandChild {
+        width: 100%;
+        height: 700px;
+        /* padding-top: 120px; */
+        /* background-color: pink; */
+    }
+
+}
+
+.menu-menuCards-Section {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-childBox-right :nth-child(even) {
+    background-color: pink;
+    border: 2px dashed;
+}
