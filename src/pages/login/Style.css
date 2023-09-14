@@ -1,0 +1,229 @@
+.login-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-parent-Box {
+    margin-top: 90px;
+    width: 700px;
+    min-height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-child1 {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-logo {
+    height: 30px;
+}
+
+.login-header-text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-form {
+    /* height: 300px; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-input {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+.login-form-text {
+    text-align: start;
+    font-size: 20px;
+}
+
+.login-submit-btnBox {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.login-submit-btn {
+    padding: 15px 50px 15px 50px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+.login-child2 {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-or-section {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.orSectionLine {
+    background-color: gray;
+    width: 48%;
+    height: 1px;
+    border: 1px solid gray;
+}
+
+.login-guest-button {
+    padding: 15px 80px 15px 80px;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    font-size: 25px;
+}
+
+@media only screen and (max-width:720px) {
+    .login-parent-Box {
+        width: 400px;
+    }
+
+    .login-child1 {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .login-logo {
+        height: 30px;
+    }
+
+    .login-header-text {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .login-form {
+        gap: 20px;
+    }
+
+
+    .login-form-text {
+        text-align: start;
+        font-size: 15px;
+    }
+
+    .login-submit-btnBox {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+
+    .login-submit-btn {
+        padding: 15px 30px 15px 30px;
+        border-radius: 40px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+    }
+
+    .login-child2 {
+        height: 220px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .login-guest-button {
+        padding: 15px 40px 15px 40px;
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    .login-parent-Box {
+        width: 300px;
+    }
+
+    .login-child1 {
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .login-logo {
+        height: 30px;
+    }
+
+    .login-header-text {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .login-form {
+        gap: 20px;
+    }
+
+
+    .login-form-text {
+        text-align: start;
+        font-size: 15px;
+    }
+
+    .login-submit-btnBox {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+
+    .login-submit-btn {
+        padding: 15px 30px 15px 30px;
+        border-radius: 40px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+    }
+
+    .login-child2 {
+        height: 220px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .login-guest-button {
+        padding: 15px 40px 15px 40px;
+        font-size: 15px;
+    }
+
+}
