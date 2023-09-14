@@ -15,8 +15,10 @@ import accountIcon from "../../assets/Account_Icon.svg";
 import menuBurger from "../../assets/menu-burger.png";
 import offerImg from "../../assets/offer.png";
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 function CustomDrawer({ isOpen, onClose, cartIconCount }) {
+  const navigate = useNavigate();
   return (
     <Drawer isOpen={isOpen} onClose={onClose} size='full' placement='left'>
       <DrawerOverlay />
@@ -56,7 +58,10 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
           <div className='mobileNavContainer'>
             <div className='title-Text'>LET'S GET COOKIN'</div>
             <div className='mobileNavAccount'>
-              <button className='signInButton'>
+              <button
+                className='signInButton'
+                onClick={() => navigate("/login")}
+              >
                 <img src={accountIcon} alt='account Icon' />
                 Sign In / Sign Up <BsArrowRight />
               </button>
