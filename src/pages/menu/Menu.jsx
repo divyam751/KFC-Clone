@@ -15,7 +15,7 @@ const Menu = () => {
 
   const fetchData = async () => {
     await axios
-      .get("http://localhost:8080/menu")
+      .get("https://kfc-2yef.onrender.com/menu")
       .then((res) => setCardData(res.data));
   };
 
