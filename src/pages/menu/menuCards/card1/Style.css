@@ -30,7 +30,7 @@
 }
 
 .offer-card-addToCart {
-    background-color: red;
+    background-color: #E4002B;
     color: white;
     padding: 10px 40px 10px 40px;
     border-radius: 30px;
@@ -40,13 +40,14 @@
     border: none;
 
     .offee-cart-buttonImg {
-        width: 30px;
+        width: 20px;
+        padding-left: 5px;
     }
 }
 
 .offer-card-addToCart:hover {
-    background-color: teal;
     cursor: pointer;
+    zoom: 120%;
 }
 
 @media only screen and (max-width:1024px) {

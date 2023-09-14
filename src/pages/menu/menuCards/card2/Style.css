@@ -34,6 +34,10 @@
         font-weight: bold;
         text-align: start;
     }
+
+    .menu-card2-child1-oldPrice {
+        text-decoration: line-through;
+    }
 }
 
 .menu-card2-child2 {

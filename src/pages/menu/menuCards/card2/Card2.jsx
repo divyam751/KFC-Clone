@@ -20,9 +20,18 @@ const Card2 = ({ card }) => {
               className='menu-card2-child1-point'
             />
             <p>{card.varity}</p>
-            <li>{card.serving}</li>
+            {card.serving ? <li>{card.serving}</li> : ""}
           </Flex>
-          <h4> ₹ {card.price}</h4>
+          <Flex gap={20}>
+            {card.oldPrice ? (
+              <>
+                <h4 className='menu-card2-child1-oldPrice'>{card.oldPrice}</h4>
+                <h4> ₹ {card.price}</h4>`
+              </>
+            ) : (
+              <h4> ₹ {card.price}</h4>
+            )}
+          </Flex>
           <div className='card2-desc'>{card.description}</div>
         </div>
       </div>
@@ -31,7 +40,7 @@ const Card2 = ({ card }) => {
           Add to Cart
           <img
             className='offee-cart-buttonImg'
-            src='https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg'
+            src='https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg'
             alt=''
           />
         </button>

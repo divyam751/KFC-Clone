@@ -26,6 +26,12 @@ const Menu = () => {
   const peri = cardData.peri;
   const value = cardData.value;
   const chikenRolls = cardData.chikenRolls;
+  const chikenBuckets = cardData.chikenBuckets;
+  const biryaniBuckets = cardData.biryaniBuckets;
+  const boxMeals = cardData.boxMeals;
+  const burger = cardData.burger;
+  const snacks = cardData.snacks;
+  const beberages = cardData.beberages;
   // console.log(value);
 
   useEffect(() => {
@@ -292,6 +298,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
+              {/*Chiken Rolls */}
               <div id='chicken-rolls' className='menu-grandChild'>
                 <h1>CHICKEN ROLLS</h1>
                 <div className='menu-childCards2'>
@@ -306,23 +313,93 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
+              {/* Chiken Buckets */}
               <div id='chicken-buckets' className='menu-grandChild'>
                 <h1>CHICKEN BUCKETS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {chikenBuckets?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
+              {/* Biryani Buckets */}
               <div id='biryani-buckets' className='menu-grandChild'>
                 <h1>BIRYANI BUCKETS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {biryaniBuckets?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
+              {/* Box Meals */}
               <div id='box-meals' className='menu-grandChild'>
                 <h1>BOX MEALS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {boxMeals?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
+              {/* Burger */}
               <div id='burgers' className='menu-grandChild'>
                 <h1>BURGERS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {burger?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
               <div id='snacks' className='menu-grandChild'>
                 <h1>SNACKS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {snacks?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
               <div id='beverages' className='menu-grandChild'>
                 <h1>BEVERAGES</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {beberages?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
