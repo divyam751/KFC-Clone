@@ -7,14 +7,15 @@ import { BsSearch } from "react-icons/bs";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Card1 from "./menuCards/card1/Card1";
 import axios from "axios";
+import Card2 from "./menuCards/card2/Card2";
 
 const Menu = () => {
   const [cardData, setCardData] = useState([]);
   const [rightNavClass, setRightNavClass] = useState("menu-childBox-left");
 
-  const fetchData = () => {
-    axios
-      .get("http://localhost:8080/peri-peri-chiken")
+  const fetchData = async () => {
+    await axios
+      .get("http://localhost:8080/menu")
       .then((res) => setCardData(res.data));
   };
 
@@ -22,7 +23,11 @@ const Menu = () => {
     fetchData();
   }, []);
 
-  console.log(cardData);
+  const peri = cardData.peri;
+  const value = cardData.value;
+  const chikenRolls = cardData.chikenRolls;
+  // console.log(value);
+
   useEffect(() => {
     const handleScroll = () => {
       window.scrollY >= 70
@@ -254,11 +259,15 @@ const Menu = () => {
               </div>
             </div>
             <div className='menu-menuCards-Section'>
-              <div id='peri-peri-chicken' className='menu-grandChild'>
+              {/*peri-peri-chicken  */}
+              <div
+                id='peri-peri-chicken'
+                className='menu-grandChild-withGrayBG'
+              >
                 <h2 style={{ paddingLeft: "20px" }}>PERI PERI CHICKEN</h2>
                 <div className='menu-childCards'>
                   <div className='menu-childCards-box'>
-                    {cardData.map((card, index) => {
+                    {peri?.map((card, index) => {
                       return (
                         <div className='menu-periperi' key={index}>
                           <Card1 card={card} />
@@ -268,11 +277,34 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
+              {/* value-snackers */}
               <div id='value-snackers' className='menu-grandChild'>
                 <h1>VALUE SNACKERS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {value?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
               <div id='chicken-rolls' className='menu-grandChild'>
                 <h1>CHICKEN ROLLS</h1>
+                <div className='menu-childCards2'>
+                  <div className='menu-childCards-box2'>
+                    {chikenRolls?.map((card, index) => {
+                      return (
+                        <div className='value-snackers' key={index}>
+                          <Card2 card={card} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
               <div id='chicken-buckets' className='menu-grandChild'>
                 <h1>CHICKEN BUCKETS</h1>

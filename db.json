@@ -79,42 +79,192 @@
       "text": "1 Pc free Veg Zinger on a cart value of 499 or above on first order. Only for registered users"
     }
   ],
-  "peri-peri-chiken": [
-    {
-      "id": 1,
-      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002144.jpg?ver=33.22",
-      "title": "5 Leg Pc & 2 Dips Bucket",
-      "varity": "Non veg",
-      "serving": " Serves 2",
-      "price": "519.05",
-      "description": "Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)"
-    },
-    {
-      "id": 2,
-      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002319.jpg?ver=33.22",
-      "title": "Peri 10 Pc Chicken Strips & 2 Dips",
-      "varity": "Non veg",
-      "serving": " Serves 2",
-      "price": "499.05",
-      "description": "Save 24% on 10 Spicy Peri Peri chicken boneless strips with 2 Dips"
-    },
-    {
-      "id": 3,
-      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002141.jpg?ver=33.22",
-      "title": "Peri Peri 10 Leg Pc & 4 Dips",
-      "varity": "Non veg",
-      "serving": " Serves 3-4",
-      "price": "948.57",
-      "description": "Save Rs. 334 on 10 Peri Peri Leg Pieces & 4 Dips (20 gm each)"
-    },
-    {
-      "id": 4,
-      "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002158.jpg?ver=33.22",
-      "title": "Peri Peri 6pc Chicken Strips",
-      "varity": "Non veg",
-      "serving": " Serves 2",
-      "price": "299.05",
-      "description": "Save 16% on 6 Spicy Peri Peri chicken boneless strips"
-    }
-  ]
+
+  "menu": {
+    "peri": [
+      {
+        "id": 1,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002144.jpg?ver=33.22",
+        "title": "5 Leg Pc & 2 Dips Bucket",
+        "varity": "Non veg",
+        "serving": " Serves 2",
+        "price": "519.05",
+        "description": "Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)"
+      },
+      {
+        "id": 2,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002319.jpg?ver=33.22",
+        "title": "Peri 10 Pc Chicken Strips & 2 Dips",
+        "varity": "Non veg",
+        "serving": " Serves 2",
+        "price": "499.05",
+        "description": "Save 24% on 10 Spicy Peri Peri chicken boneless strips with 2 Dips"
+      },
+      {
+        "id": 3,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002141.jpg?ver=33.22",
+        "title": "Peri Peri 10 Leg Pc & 4 Dips",
+        "varity": "Non veg",
+        "serving": " Serves 3-4",
+        "price": "948.57",
+        "description": "Save Rs. 334 on 10 Peri Peri Leg Pieces & 4 Dips (20 gm each)"
+      },
+      {
+        "id": 4,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002158.jpg?ver=33.22",
+        "title": "Peri Peri 6pc Chicken Strips",
+        "varity": "Non veg",
+        "serving": " Serves 2",
+        "price": "299.05",
+        "description": "Save 16% on 6 Spicy Peri Peri chicken boneless strips"
+      }
+    ],
+    "value": [
+      {
+        "id": 1,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K617.jpg?ver=33.22",
+        "title": "Single Chicken Roll",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "price": "119.05",
+        "description": "Street style roll with single chicken strip, onions and two spicy sauce"
+      },
+      {
+        "id": 2,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002348.jpg?ver=33.22",
+        "title": "Chicken Longer Burger & 2 Strips Combo",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "price": "219.05",
+        "description": "Longgg burger with crunchy chicken, onions & a punchy sauce , served with 2 peri peri chicken strips"
+      },
+      {
+        "id": 3,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K136.jpg?ver=33.22",
+        "title": "Regular Popcorn",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "price": "115.24",
+        "description": "Signature bite-sized boneless chicken, with special spices"
+      },
+      {
+        "id": 4,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002301.jpg?ver=33.22",
+        "title": "2 Veg Longer Burger",
+        "point": "https://online.kfc.co.in/static/media/Veg_dot_Icon.d1a3902d.svg",
+        "varity": "Veg",
+        "price": "198.10",
+        "description": "The really long burger with Veg Patty, Onion, Lettuce and two sauces"
+      },
+      {
+        "id": 5,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K701.jpg?ver=33.22",
+        "title": "Chocolate Lava Cake",
+        "point": "https://online.kfc.co.in/static/media/Veg_dot_Icon.d1a3902d.svg",
+        "varity": "Veg",
+        "price": "108.57",
+        "description": "Soft Chocolate cake with a gooey center- perfect chocolaty end to every meal"
+      }
+    ],
+    "chikenRolls": [
+      {
+        "id": 1,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002324.jpg?ver=33.22",
+        "title": "Classic Chicken Roll & Pepsi Combo",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 1",
+        "price": "176.19",
+        "description": "Our new Classic Chicken Roll served with Pepsi 475ml"
+      },
+      {
+        "id": 2,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002325.jpg?ver=33.22",
+        "title": "Double Chicken Roll & Pepsi Combo",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 1",
+        "price": "225.71",
+        "description": "Our new Double Chicken Roll served with Pepsi 475ml"
+      },
+      {
+        "id": 3,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002070.jpg?ver=33.22",
+        "title": "Classic Chicken Roll Meal for 1",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 1",
+        "price": "339.05",
+        "description": "Deal combo of 1 Classic Chicken Roll, Large Fries, 2 Dips & Pepsi 475ml"
+      },
+      {
+        "id": 4,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002069.jpg?ver=33.22",
+        "title": "Double Chicken Roll Meal for 1",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 1",
+        "price": "379.05",
+        "description": "Deal combo of 1 Double Chicken Roll, Large Fries, 2 Dips & Pepsi 475ml"
+      },
+      {
+        "id": 5,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K617.jpg?ver=33.22",
+        "title": "Classic Chicken Roll",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "price": "176.19",
+        "description": "KFC's take on the street style roll with single chicken strip, onions & spicy sauces"
+      },
+      {
+        "id": 6,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K657.jpg?ver=33.22",
+        "title": "Double Chicken Roll & Pepsi Combo",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "price": "168.57",
+        "description": "KFC's take on the street style roll with double chicken strips, onions & spicy sauces"
+      },
+      {
+        "id": 7,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002068.jpg?ver=33.22",
+        "title": "Classic Chicken Roll Meal for 1",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 2",
+        "price": "479.05",
+        "description": "Deal combo of 2 Classic Chicken Rolls, Large Fries, 2 Dips & Pepsi 475ml"
+      },
+      {
+        "id": 8,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002067.jpg?ver=33.22",
+        "title": "Double Chicken Roll Meal for 1",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 2",
+        "price": "548.57",
+        "description": "Deal combo of 2 Double Chicken Rolls, Large Fries, 2 Dips & Pepsi 475ml"
+      },
+      {
+        "id": 9,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002315.jpg?ver=33.22",
+        "title": "Classic Chicken Roll Meal for 1",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 2",
+        "price": "228.57",
+        "description": "Double the fun with 2 Classic Chicken Rolls"
+      },
+      {
+        "id": 10,
+        "url": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002316.jpg?ver=33.22",
+        "title": "2 Double Chicken Roll",
+        "point": "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg",
+        "varity": "Non veg",
+        "serving": "Serves 2",
+        "price": "328.57",
+        "description": "Double the fun with 2 Double Chicken Rolls"
+      }
+    ]
+  }
 }
