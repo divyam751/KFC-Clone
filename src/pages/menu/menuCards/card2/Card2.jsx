@@ -11,7 +11,7 @@ const Card2 = ({ card }) => {
           alt={card.title}
           className='menu-card2-child1-img'
         />
-        <div className='menu-card2-child1-desc'>
+        <div className='menu-card2-child1-desc' style={{ display: "flex" }}>
           <div className='menu-card2-child1-title'> {card.title} </div>
           <Flex gap={10}>
             <img
