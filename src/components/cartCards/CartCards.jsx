@@ -3,18 +3,7 @@ import "./Style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const card = {
-  id: 1,
-  url: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002144.jpg?ver=33.22",
-  title: "5 Leg Pc & 2 Dips Bucket",
-  varity: "Non veg",
-  serving: " Serves 2",
-  price: "519.05",
-  description:
-    "Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)",
-};
-
-const CartCards = () => {
+const CartCards = ({ card }) => {
   const [itemCount, setItemCount] = useState(1);
 
   const handleDec = () => {
@@ -36,18 +25,6 @@ const CartCards = () => {
 
   return (
     <div className='cart-cards-container'>
-      <ToastContainer
-        position='top-center'
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme='colored'
-      />
       <div className='cart-cards-parentbox'>
         <div className='cart-cards-child-left'>
           <img

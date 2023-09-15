@@ -10,7 +10,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ setBurger, burger, totalAmount, cartIconCount }) => {
+const Navbar = ({ setBurger, burger, purchase }) => {
   const navigate = useNavigate();
 
   const [className, setClassName] = useState("");
@@ -68,10 +68,10 @@ const Navbar = ({ setBurger, burger, totalAmount, cartIconCount }) => {
               className='headerIconButtons'
               onClick={() => navigate("/cart")}
             >
-              <span className='headerPrice'>₹ {totalAmount} </span>
+              <span className='headerPrice'>₹ {purchase.totalAmount} </span>
               <div className='cartIcon'>
                 <img src={cartBucketIcon} alt='bucketIcon' />
-                <div className='cartIconCount'>{cartIconCount}</div>
+                <div className='cartIconCount'>{purchase.quantity}</div>
               </div>
             </button>
           </div>

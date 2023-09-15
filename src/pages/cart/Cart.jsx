@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 import { useNavigate } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
 import CartCards from "../../components/cartCards/CartCards";
 
-const Cart = ({ cartIconCount, totalAmount }) => {
+const Cart = ({ purchase }) => {
   const [cartData, setCartData] = useState([]);
-  const [empty, setEmpty] = useState(false);
   const [hope, setHope] = useState(false);
   const navigate = useNavigate();
-  const gst = parseFloat(totalAmount * 0.05).toFixed(2);
+  const gst = parseFloat(purchase.totalAmount * 0.05).toFixed(2);
   const hopePrice = 5;
   const initialCheckoutPrice = parseFloat(
-    parseFloat(totalAmount) + parseFloat(gst),
+    parseFloat(purchase.totalAmount) + parseFloat(gst),
   ).toFixed(2);
   const [checkoutPrice, setCheckoutPrice] = useState(initialCheckoutPrice);
+
+  const fetchData = () => {
+    const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
+    setCartData(localCart);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className='cart-Body'>
@@ -23,7 +31,7 @@ const Cart = ({ cartIconCount, totalAmount }) => {
         LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
         <button className='cart-headerSection-button'>Start Now</button>
       </div>
-      {empty ? (
+      {false ? (
         <div className='cart-cardsSection'>
           <div className='cart-headingSection'>
             <img src={linesLogo} alt='logo' className='cart-3lingLogo' />
@@ -33,7 +41,12 @@ const Cart = ({ cartIconCount, totalAmount }) => {
           <div className='cart-data-parent-Empty-box'>
             <div className='cart-data-parent-Empty-box-left'>
               YOUR CART IS EMPTY. LET'S START AN ORDER!
-              <button className='cart-empty-Start-button'>Start Order</button>
+              <button
+                className='cart-empty-Start-button'
+                onClick={() => navigate("/menu")}
+              >
+                Start Order
+              </button>
             </div>
             <div className='cart-data-parent-Empty-box-right'>
               <img
@@ -52,13 +65,15 @@ const Cart = ({ cartIconCount, totalAmount }) => {
             </div>
             <div className='cart-storedData'>
               <div className='cart-storedData-left'>
-                <CartCards />
-                <CartCards />
+                {cartData.map((card, index) => {
+                  return <CartCards card={card} key={index} />;
+                })}
               </div>
               <div className='cart-storedData-right'>
                 <div className='cart-amoutBox'>
                   <h2>
-                    {cartIconCount} {cartIconCount > 1 ? " ITEMS" : " ITEM"}
+                    {purchase.quantity}{" "}
+                    {purchase.quantity > 1 ? " ITEMS" : " ITEM"}
                   </h2>
                   <div className='cart-amountBox-offerBox'>
                     <div className='cart-amountBox-offerBox-circle1'></div>
@@ -80,7 +95,7 @@ const Cart = ({ cartIconCount, totalAmount }) => {
                   </div>
                   <div className='cart-amountBox-total'>
                     <p>Subtotal</p>
-                    <p>₹ {totalAmount}</p>
+                    <p>₹ {purchase.totalAmount}</p>
                   </div>
                   <div className='cart-amountBox-gst'>
                     <p>GST</p>

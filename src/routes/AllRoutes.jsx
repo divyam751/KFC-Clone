@@ -6,19 +6,14 @@ import Landing from "../pages/landingPage/Landing";
 import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
 
-const AllRoutes = ({ cartIconCount, totalAmount }) => {
+const AllRoutes = ({ purchase }) => {
   return (
     <div>
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/offers' element={<Offer />} />
-        <Route
-          path='/cart'
-          element={
-            <Cart cartIconCount={cartIconCount} totalAmount={totalAmount} />
-          }
-        />
+        <Route path='/cart' element={<Cart purchase={purchase} />} />
         <Route path='/login' element={<Login />} />
       </Routes>
     </div>

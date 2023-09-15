@@ -1,8 +1,26 @@
 import React from "react";
 import "./Style.css";
 import { Flex } from "@chakra-ui/react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Card2 = ({ card }) => {
+  const handleClick = ({ card }) => {
+    const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
+    localCart.push(card);
+    localStorage.setItem("cartData", JSON.stringify(localCart));
+    toast.success("🍗 Item added to cart!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
   return (
     <div className='menu-card2-parent'>
       <div className='menu-card2-child1'>
@@ -36,7 +54,10 @@ const Card2 = ({ card }) => {
         </div>
       </div>
       <div className='menu-card2-child2'>
-        <button className='offer-card-addToCart'>
+        <button
+          className='offer-card-addToCart'
+          onClick={() => handleClick({ card })}
+        >
           Add to Cart
           <img
             className='offee-cart-buttonImg'
