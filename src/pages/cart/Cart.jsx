@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
 import CartCards from "../../components/cartCards/CartCards";
 
-const Cart = ({ purchase }) => {
+const Cart = ({ purchase, setPurchase }) => {
   const [cartData, setCartData] = useState([]);
   const [hope, setHope] = useState(false);
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const Cart = ({ purchase }) => {
         LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
         <button className='cart-headerSection-button'>Start Now</button>
       </div>
-      {false ? (
+      {purchase.quantity < 1 ? (
         <div className='cart-cardsSection'>
           <div className='cart-headingSection'>
             <img src={linesLogo} alt='logo' className='cart-3lingLogo' />
@@ -66,7 +66,16 @@ const Cart = ({ purchase }) => {
             <div className='cart-storedData'>
               <div className='cart-storedData-left'>
                 {cartData.map((card, index) => {
-                  return <CartCards card={card} key={index} />;
+                  return (
+                    <CartCards
+                      card={card}
+                      key={index}
+                      purchase={purchase}
+                      setPurchase={setPurchase}
+                      cartData={cartData}
+                      setCartData={setCartData}
+                    />
+                  );
                 })}
               </div>
               <div className='cart-storedData-right'>

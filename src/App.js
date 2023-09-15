@@ -10,7 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const initialPurchase = {
+  const initialPurchase = JSON.parse(localStorage.getItem("userPurchase")) || {
     quantity: 0,
     subTotal: 0,
     hopePrice: 5,
@@ -18,6 +18,8 @@ function App() {
   };
   const [burger, setBurger] = useState(false);
   const [purchase, setPurchase] = useState(initialPurchase);
+
+  localStorage.setItem("userPurchase", JSON.stringify(purchase));
 
   // const totalAmount = 565.71;
   // const cartIconCount = 2;
@@ -37,7 +39,7 @@ function App() {
       ) : (
         <Navbar setBurger={setBurger} burger={burger} purchase={purchase} />
       )}
-      <AllRoutes purchase={purchase} />
+      <AllRoutes purchase={purchase} setPurchase={setPurchase} />
       {/* <Footer /> */}
       <ToastContainer
         position='top-right'

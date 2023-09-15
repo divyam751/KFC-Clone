@@ -4,13 +4,20 @@ import { Flex } from "@chakra-ui/react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Card2 = ({ card }) => {
+const Card2 = ({ card, setPurchase, purchase }) => {
   const handleClick = ({ card }) => {
     const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
+    card.quantity = 1;
     localCart.push(card);
     localStorage.setItem("cartData", JSON.stringify(localCart));
+
+    const updatedPurchse = { ...purchase };
+    updatedPurchse.quantity += 1;
+
+    setPurchase(updatedPurchse);
+
     toast.success("🍗 Item added to cart!", {
-      position: "top-right",
+      position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,

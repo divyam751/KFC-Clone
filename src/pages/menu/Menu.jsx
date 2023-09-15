@@ -9,7 +9,7 @@ import Card1 from "./menuCards/card1/Card1";
 import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";
 
-const Menu = () => {
+const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
   const [rightNavClass, setRightNavClass] = useState("menu-childBox-left");
 
@@ -276,7 +276,11 @@ const Menu = () => {
                     {peri?.map((card, index) => {
                       return (
                         <div className='menu-periperi' key={index}>
-                          <Card1 card={card} />
+                          <Card1
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -291,7 +295,11 @@ const Menu = () => {
                     {value?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -306,7 +314,11 @@ const Menu = () => {
                     {chikenRolls?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -321,7 +333,11 @@ const Menu = () => {
                     {chikenBuckets?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -336,7 +352,11 @@ const Menu = () => {
                     {biryaniBuckets?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -351,7 +371,11 @@ const Menu = () => {
                     {boxMeals?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -366,7 +390,11 @@ const Menu = () => {
                     {burger?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -380,7 +408,11 @@ const Menu = () => {
                     {snacks?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}
@@ -394,7 +426,11 @@ const Menu = () => {
                     {beberages?.map((card, index) => {
                       return (
                         <div className='value-snackers' key={index}>
-                          <Card2 card={card} />
+                          <Card2
+                            card={card}
+                            setPurchase={setPurchase}
+                            purchase={purchase}
+                          />
                         </div>
                       );
                     })}

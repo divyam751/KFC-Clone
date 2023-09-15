@@ -88,6 +88,12 @@
     margin-top: 30px;
 }
 
+.cart-empty-Start-button:hover {
+    cursor: pointer;
+    zoom: 120%;
+    background-color: green;
+}
+
 .cart-data-parent-Empty-box-right {
     padding-top: 40px;
 }

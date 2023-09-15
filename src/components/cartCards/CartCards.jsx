@@ -3,14 +3,39 @@ import "./Style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const CartCards = ({ card }) => {
-  const [itemCount, setItemCount] = useState(1);
+const CartCards = ({ card, purchase, setPurchase, cartData, setCartData }) => {
+  // const [itemCount, setItemCount] = useState(1);
 
-  const handleDec = () => {
-    setItemCount(itemCount - 1);
+  const handleRemove = (id) => {
+    const updatedCartData = cartData.filter((item) => item.id !== id);
+    const updatedPurchase = { ...purchase };
+    updatedPurchase.quantity = updatedPurchase.quantity - cartData[id].quantity;
+    setCartData(updatedCartData);
+    localStorage.setItem("cartData", JSON.stringify(updatedCartData));
+    setPurchase(updatedPurchase);
   };
-  const handleInc = () => {
-    setItemCount(itemCount + 1);
+  const handleDec = (id) => {
+    // setItemCount(itemCount - 1);
+    const updatedPurchase = { ...purchase };
+    updatedPurchase.quantity -= 1;
+    setPurchase(updatedPurchase);
+
+    const index = cartData.findIndex((item) => item.id === id);
+    cartData[index].quantity -= 1;
+
+    localStorage.setItem("cartData", JSON.stringify(cartData));
+  };
+  const handleInc = (id) => {
+    // setItemCount(itemCount + 1);
+    const updatedPurchase = { ...purchase };
+    updatedPurchase.quantity += 1;
+    setPurchase(updatedPurchase);
+
+    const index = cartData.findIndex((item) => item.id === id);
+    cartData[index].quantity += 1;
+
+    localStorage.setItem("cartData", JSON.stringify(cartData));
+
     toast.success("🍗 Item added to cart!", {
       position: "top-center",
       autoClose: 5000,
@@ -36,25 +61,30 @@ const CartCards = ({ card }) => {
         <div className='cart-cards-child-right'>
           <div className='cart-cards-right-child1'>
             <p className='cart-cards-right-child1-title'>{card.title}</p>
-            <p className='cart-cards-right-child1-remove'>Remove</p>
+            <p
+              className='cart-cards-right-child1-remove'
+              onClick={() => handleRemove(card.id)}
+            >
+              Remove
+            </p>
           </div>
           <div className='cart-cards-right-child2'>
             <button
-              onClick={handleDec}
-              disabled={itemCount < 2}
+              onClick={() => handleDec(card.id)}
+              disabled={card.quantity < 2}
               className='cart-cards-right-child2-buttons'
             >
               -
             </button>
-            <h3> {itemCount} </h3>
+            <h3> {card.quantity} </h3>
             <button
-              onClick={handleInc}
+              onClick={() => handleInc(card.id)}
               className='cart-cards-right-child2-buttons'
             >
               +
             </button>
             <div className='cart-cards-right-child2-itemPrice'>
-              <p>₹ {parseFloat(card.price * itemCount).toFixed(2)}</p>
+              <p>₹ {parseFloat(card.price * card.quantity).toFixed(2)}</p>
             </div>
           </div>
         </div>
