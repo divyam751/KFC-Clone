@@ -11,9 +11,9 @@ const Card2 = ({ card }) => {
           alt={card.title}
           className='menu-card2-child1-img'
         />
-        <div className='menu-card2-child1-desc' style={{ display: "flex" }}>
+        <div className='menu-card2-child1-desc'>
           <div className='menu-card2-child1-title'> {card.title} </div>
-          <Flex gap={10}>
+          <Flex gap={10} pb={20}>
             <img
               src={card.point}
               alt={card.varity}
@@ -22,7 +22,7 @@ const Card2 = ({ card }) => {
             <p>{card.varity}</p>
             {card.serving ? <li>{card.serving}</li> : ""}
           </Flex>
-          <Flex gap={20}>
+          <Flex gap={20} pb={20}>
             {card.oldPrice ? (
               <>
                 <h4 className='menu-card2-child1-oldPrice'>{card.oldPrice}</h4>

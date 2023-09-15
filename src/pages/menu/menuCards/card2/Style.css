@@ -23,7 +23,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
     }
 
     .card2-desc {
@@ -46,4 +45,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.menu-card2-child1-title {
+    padding-bottom: 20px;
 }
