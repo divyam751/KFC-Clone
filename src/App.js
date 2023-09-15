@@ -9,8 +9,8 @@ import AllRoutes from "./routes/AllRoutes";
 function App() {
   const [burger, setBurger] = useState(false);
 
-  const totalAmount = 0;
-  const cartIconCount = 0;
+  const totalAmount = 565.71;
+  const cartIconCount = 2;
   const toggleDrawer = () => {
     setBurger(!burger);
   };
@@ -31,7 +31,7 @@ function App() {
           cartIconCount={cartIconCount}
         />
       )}
-      <AllRoutes />
+      <AllRoutes cartIconCount={cartIconCount} totalAmount={totalAmount} />
       {/* <Footer /> */}
     </div>
   );
