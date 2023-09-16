@@ -13,7 +13,7 @@ function App() {
   const initialPurchase = JSON.parse(localStorage.getItem("userPurchase")) || {
     quantity: 0,
     subTotal: 0,
-    hopePrice: 5,
+    hopePrice: 0,
     totalAmount: 0,
   };
   const [burger, setBurger] = useState(false);

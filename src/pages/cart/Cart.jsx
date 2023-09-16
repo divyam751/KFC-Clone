@@ -7,22 +7,29 @@ import CartCards from "../../components/cartCards/CartCards";
 
 const Cart = ({ purchase, setPurchase }) => {
   const [cartData, setCartData] = useState([]);
-  const [hope, setHope] = useState(false);
+
+  const initialHope = JSON.parse(localStorage.getItem("hope")) || false;
+  console.log(initialHope);
+  const [hope, setHope] = useState(initialHope);
+
+  const handleHope = () => {
+    setHope(!hope);
+    localStorage.setItem("hope", !hope);
+    const updatedPurchase = { ...purchase };
+    if (!hope) {
+      updatedPurchase.totalAmount = parseFloat(
+        parseFloat(updatedPurchase.totalAmount) + 5,
+      ).toFixed(2);
+    } else {
+      updatedPurchase.totalAmount = parseFloat(
+        updatedPurchase.totalAmount - 5,
+      ).toFixed(2);
+    }
+    setPurchase(updatedPurchase);
+  };
+
   const navigate = useNavigate();
   const gst = parseFloat(purchase.subTotal * 0.05).toFixed(2);
-  const updatedPurchase = { ...purchase };
-  updatedPurchase.totalAmount = parseFloat(
-    parseFloat(updatedPurchase.subTotal) +
-      parseFloat(gst) +
-      parseFloat(purchase.hopePrice),
-  ).toFixed(2);
-
-  setPurchase(updatedPurchase);
-  const hopePrice = 5;
-  const initialCheckoutPrice = parseFloat(
-    parseFloat(purchase.totalAmount) + parseFloat(gst),
-  ).toFixed(2);
-  const [checkoutPrice, setCheckoutPrice] = useState(initialCheckoutPrice);
 
   const fetchData = () => {
     const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
@@ -131,11 +138,9 @@ const Cart = ({ purchase, setPurchase }) => {
                     <input
                       type='checkbox'
                       onChange={() => {
-                        setHope(!hope);
-                        hope
-                          ? setPurchase((purchase.hopePrice = 0))
-                          : setPurchase((purchase.hopePrice = 5));
+                        handleHope();
                       }}
+                      checked={hope}
                     />
                     <Flex direction={"column"}>
                       <p> Donate ₹5.00 Tick to Add Hope.</p>
@@ -148,7 +153,7 @@ const Cart = ({ purchase, setPurchase }) => {
                     />
                   </div>
                   <button className='cart-amountBox-hopeBox-checkoutBtn'>
-                    <p>Checkout </p> <p> ₹ {checkoutPrice}</p>
+                    <p>Checkout </p> <p> ₹ {purchase.totalAmount}</p>
                   </button>
                 </div>
               </div>

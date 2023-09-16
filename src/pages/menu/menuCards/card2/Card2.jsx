@@ -22,7 +22,9 @@ const Card2 = ({ card, setPurchase, purchase }) => {
     updatedPurchase.subTotal = parseFloat(
       parseFloat(updatedPurchase.subTotal) + parseFloat(card.price),
     ).toFixed(2);
-
+    updatedPurchase.totalAmount = parseFloat(
+      updatedPurchase.subTotal * 1.05,
+    ).toFixed(2);
     setPurchase(updatedPurchase);
 
     toast.success("🍗 Item added to cart!", {

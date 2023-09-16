@@ -19,6 +19,10 @@ const CartCards = ({ card, purchase, setPurchase, cartData, setCartData }) => {
         parseFloat(card.price * card.quantity),
     ).toFixed(2);
 
+    updatedPurchase.totalAmount = parseFloat(
+      updatedPurchase.subTotal * 1.05,
+    ).toFixed(2);
+
     setCartData(updatedCartData);
     localStorage.setItem("cartData", JSON.stringify(updatedCartData));
     setPurchase(updatedPurchase);
@@ -29,6 +33,9 @@ const CartCards = ({ card, purchase, setPurchase, cartData, setCartData }) => {
     updatedPurchase.quantity -= 1;
     updatedPurchase.subTotal = parseFloat(
       parseFloat(updatedPurchase.subTotal) - parseFloat(card.price),
+    ).toFixed(2);
+    updatedPurchase.totalAmount = parseFloat(
+      updatedPurchase.subTotal * 1.05,
     ).toFixed(2);
 
     setPurchase(updatedPurchase);
@@ -45,9 +52,11 @@ const CartCards = ({ card, purchase, setPurchase, cartData, setCartData }) => {
     updatedPurchase.subTotal = parseFloat(
       parseFloat(updatedPurchase.subTotal) + parseFloat(card.price),
     ).toFixed(2);
+    updatedPurchase.totalAmount = parseFloat(
+      updatedPurchase.subTotal * 1.05,
+    ).toFixed(2);
 
     setPurchase(updatedPurchase);
-
     const index = cartData.findIndex((item) => item.id === id);
     cartData[index].quantity += 1;
 
