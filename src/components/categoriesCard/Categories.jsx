@@ -1,9 +1,15 @@
 import React from "react";
 import "./Style.css";
+import { useNavigate } from "react-router-dom";
 
 const Categories = ({ url, categoryName }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/menu");
+  };
   return (
-    <div className='categoriesCard'>
+    <div className='categoriesCard' onClick={handleClick}>
       <div className='categoriesImg'>
         <img src={url} alt='categoryImg' className='categoryImg' />
       </div>
