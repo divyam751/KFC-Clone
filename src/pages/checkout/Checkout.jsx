@@ -3,6 +3,7 @@ import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 import { useNavigate } from "react-router-dom";
 import PayModal from "../../components/payModal/PayModal";
+import { Heading } from "@chakra-ui/react";
 
 const initialUserData = {
   name: "",
@@ -14,6 +15,7 @@ const initialUserData = {
 
 const Checkout = ({ purchase, setPurchase }) => {
   const [userData, setUserData] = useState(initialUserData);
+  const [showPayBtn, setShowPayBtn] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +42,7 @@ const Checkout = ({ purchase, setPurchase }) => {
               {/* LEFT CARDS */}
               <form onSubmit={(e) => handleSubmit(e)} className='checkout-form'>
                 <div className='checkout-card-child'>
-                  <h1>Customer Details</h1>
+                  <Heading>Customer Details</Heading>
                   <input
                     type='text'
                     placeholder='Full Name*'
@@ -80,11 +82,6 @@ const Checkout = ({ purchase, setPurchase }) => {
                     className='checkout-form-input'
                   />
                   <PayModal />
-                  <input
-                    type='submit'
-                    value='Select Payment'
-                    className='checkout-form-submit'
-                  />
                 </div>
               </form>
             </div>
@@ -122,7 +119,15 @@ const Checkout = ({ purchase, setPurchase }) => {
                 </div>
 
                 <div className='checkout-amountBox-line'></div>
-                <button className='checkout-amountBox-hopeBox-checkoutBtn'>
+                <button
+                  className={
+                    showPayBtn
+                      ? "checkout-amountBox-hopeBox-checkoutBtn"
+                      : "checkout-amountBox-hopeBox-checkoutBtn-disabled"
+                  }
+                  disabled={!showPayBtn}
+                  onClick={() => alert("clicked")}
+                >
                   <p>Continue to Payment </p> <p> ₹ {purchase.totalAmount}</p>
                 </button>
               </div>

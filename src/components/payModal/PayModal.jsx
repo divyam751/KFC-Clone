@@ -15,33 +15,63 @@ const PayModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <button type='submit' onClick={onOpen} className='checkout-form-submit'>
+        Select Payment
+      </button>
 
       <Modal isOpen={isOpen} size={"md"} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+        <ModalContent bg={"gray.200"}>
+          <ModalHeader fontSize={25} fontWeight={"bold"}>
+            SELECT YOUR PAYMENT
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <h2>
-              cimus, neque quaerat magni dolor incidunt enim voluptatibus et
-              soluta nesciunt ut reiciendis totam eligendi magnam aliquam qui
-              explicabo a, asperiores necessitatibus. Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Quae voluptatum illo,
-              cupiditate placeat facilis unde nostrum doloremque accusantium?
-              Vitae corrupti facilis ex sunt porro voluptatibus, quibusdam
-              magnam hic quidem dolore! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ducimus, neque quaerat magni dolor incidunt enim
-              voluptatibus et soluta nesciunt ut reiciendis totam eligendi
-              magnam aliquam qui explicabo a, asperiores necessitatibus.
-            </h2>
+            <div className='PayModal-parent'>
+              <div className='PayModal-child'>
+                <label>
+                  <input
+                    type='radio'
+                    name='paymentOption'
+                    value='Credit/Debit Card'
+                  />
+                  <span className='lable-name'>Credit/Debit Card</span>
+                </label>
+              </div>
+              <div className='PayModal-child'>
+                <label>
+                  <input type='radio' name='paymentOption' value='Netbanking' />
+                  <span className='lable-name'>Netbanking</span>
+                </label>
+              </div>
+              <div className='PayModal-child'>
+                <label>
+                  <input type='radio' name='paymentOption' value='Cash' />
+                  <span className='lable-name'>Cash</span>
+                </label>
+              </div>
+              <div className='PayModal-child'>
+                <label>
+                  <input type='radio' name='paymentOption' value='UPI' />
+                  <span className='lable-name'>UPI</span>
+                </label>
+              </div>
+            </div>
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
+          <ModalFooter justifyContent={"center"}>
+            <Button
+              colorScheme='blue'
+              mr={3}
+              onClick={onClose}
+              pl={10}
+              pr={10}
+              pt={4}
+              pb={4}
+              borderRadius={30}
+            >
+              Submit
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
