@@ -6,7 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 const Card1 = ({ card, setPurchase, purchase }) => {
   const handleClick = ({ card }) => {
     const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
-    localCart.push(card);
+    const index = localCart.findIndex((item) => item.id === card.id);
+
+    if (index >= 0) {
+      localCart[index].quantity += 1;
+    } else {
+      card.quantity = 1;
+      localCart.push(card);
+    }
     localStorage.setItem("cartData", JSON.stringify(localCart));
 
     const updatedPurchse = { ...purchase };

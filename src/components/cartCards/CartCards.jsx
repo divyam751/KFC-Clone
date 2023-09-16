@@ -8,8 +8,13 @@ const CartCards = ({ card, purchase, setPurchase, cartData, setCartData }) => {
 
   const handleRemove = (id) => {
     const updatedCartData = cartData.filter((item) => item.id !== id);
+
+    const index = cartData.findIndex((item) => item.id === id);
+
     const updatedPurchase = { ...purchase };
-    updatedPurchase.quantity = updatedPurchase.quantity - cartData[id].quantity;
+    updatedPurchase.quantity =
+      updatedPurchase.quantity - cartData[index].quantity;
+
     setCartData(updatedCartData);
     localStorage.setItem("cartData", JSON.stringify(updatedCartData));
     setPurchase(updatedPurchase);
