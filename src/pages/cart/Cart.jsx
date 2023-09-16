@@ -9,7 +9,15 @@ const Cart = ({ purchase, setPurchase }) => {
   const [cartData, setCartData] = useState([]);
   const [hope, setHope] = useState(false);
   const navigate = useNavigate();
-  const gst = parseFloat(purchase.totalAmount * 0.05).toFixed(2);
+  const gst = parseFloat(purchase.subTotal * 0.05).toFixed(2);
+  const updatedPurchase = { ...purchase };
+  updatedPurchase.totalAmount = parseFloat(
+    parseFloat(updatedPurchase.subTotal) +
+      parseFloat(gst) +
+      parseFloat(purchase.hopePrice),
+  ).toFixed(2);
+
+  setPurchase(updatedPurchase);
   const hopePrice = 5;
   const initialCheckoutPrice = parseFloat(
     parseFloat(purchase.totalAmount) + parseFloat(gst),
@@ -104,7 +112,7 @@ const Cart = ({ purchase, setPurchase }) => {
                   </div>
                   <div className='cart-amountBox-total'>
                     <p>Subtotal</p>
-                    <p>₹ {purchase.totalAmount}</p>
+                    <p>₹ {purchase.subTotal}</p>
                   </div>
                   <div className='cart-amountBox-gst'>
                     <p>GST</p>
@@ -125,18 +133,8 @@ const Cart = ({ purchase, setPurchase }) => {
                       onChange={() => {
                         setHope(!hope);
                         hope
-                          ? setCheckoutPrice(
-                              parseFloat(
-                                parseFloat(checkoutPrice) -
-                                  parseFloat(hopePrice),
-                              ).toFixed(2),
-                            )
-                          : setCheckoutPrice(
-                              parseFloat(
-                                parseFloat(checkoutPrice) +
-                                  parseFloat(hopePrice),
-                              ).toFixed(2),
-                            );
+                          ? setPurchase((purchase.hopePrice = 0))
+                          : setPurchase((purchase.hopePrice = 5));
                       }}
                     />
                     <Flex direction={"column"}>

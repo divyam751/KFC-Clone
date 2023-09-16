@@ -17,10 +17,13 @@ const Card2 = ({ card, setPurchase, purchase }) => {
     }
     localStorage.setItem("cartData", JSON.stringify(localCart));
 
-    const updatedPurchse = { ...purchase };
-    updatedPurchse.quantity += 1;
+    const updatedPurchase = { ...purchase };
+    updatedPurchase.quantity += 1;
+    updatedPurchase.subTotal = parseFloat(
+      parseFloat(updatedPurchase.subTotal) + parseFloat(card.price),
+    ).toFixed(2);
 
-    setPurchase(updatedPurchse);
+    setPurchase(updatedPurchase);
 
     toast.success("🍗 Item added to cart!", {
       position: "top-center",
