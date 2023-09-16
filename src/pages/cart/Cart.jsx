@@ -143,7 +143,7 @@ const Cart = ({ purchase, setPurchase }) => {
                       }}
                       checked={hope}
                     />
-                    <Flex direction={"column"}>
+                    <Flex direction={"column"} fontSize={13}>
                       <p> Donate ₹5.00 Tick to Add Hope.</p>
                       <p> Our goal is to feed 20 million people by 2023.</p>
                     </Flex>
