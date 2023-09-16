@@ -64,3 +64,40 @@
     border: 2px solid;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+    .cart-cards-container {
+        height: 500px;
+        width: 320px;
+    }
+
+    .cart-cards-child-left-img {
+        height: auto;
+        width: 300px;
+    }
+
+    .cart-cards-parentbox {
+        flex-direction: column;
+    }
+
+
+    .cart-cards-child-right {
+        flex-direction: column;
+        gap: 30px;
+        height: 300px;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .cart-cards-right-child1 {
+        width: 100%;
+        text-align: start;
+        gap: 20px;
+
+    }
+
+    .cart-cards-right-child2 {
+        width: 60%;
+    }
+}

@@ -66,7 +66,8 @@ const Cart = ({ purchase, setPurchase }) => {
             <div className='cart-data-parent-Empty-box-right'>
               <img
                 src='https://online.kfc.co.in/static/media/empty_cart.32f17a45.png'
-                alt=''
+                alt='empty cart img'
+                className='EmptyCartImage'
               />
             </div>
           </div>
