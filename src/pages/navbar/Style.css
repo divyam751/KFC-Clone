@@ -39,6 +39,7 @@
     align-items: center;
     border-top: 1px solid rgb(212, 209, 209);
     border-bottom: 1px solid rgb(212, 209, 209);
+    height: 90px;
 }
 
 .hamburger {
@@ -118,11 +119,23 @@
     text-align: end;
 }
 
+@media only screen and (max-width : 550px) {
+    .setLocation {
+        font-size: 8px;
+        padding: 1px;
+    }
+
+    .headerPrice {
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width : 1024px) {
 
     .nav {
         justify-content: space-between;
-        padding: 0px 40px 0px 40px;
+        padding: 0px 20px 0px 20px;
     }
 
     .hamburger {

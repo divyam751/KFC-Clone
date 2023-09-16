@@ -36,7 +36,15 @@
 
     .menu-card2-child1-oldPrice {
         text-decoration: line-through;
+        font-size: 16px;
+        font-weight: bold;
     }
+
+    .menu-card2-child1-currentPrice {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
 }
 
 .menu-card2-child2 {

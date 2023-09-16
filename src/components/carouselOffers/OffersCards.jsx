@@ -49,7 +49,8 @@ const OffersCards = ({ cardData }) => {
                   className='cardButtonSection'
                   onClick={() => navigate("/offers")}
                 >
-                  View Details
+                  <p>View Details</p>
+
                   <button className='cardButtonOffer'>Redeem</button>
                 </div>
               </div>

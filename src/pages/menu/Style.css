@@ -2,8 +2,8 @@
 
 .menu-Body {
     width: 100%;
-    padding-top: 100px;
-    height: 100vh;
+    padding-top: 90px;
+    min-height: 100vh;
 }
 
 .menu-headerSection {
@@ -32,6 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -3px;
+    padding-bottom: 50px;
 }
 
 .menu-childBox {
@@ -45,7 +47,7 @@
 }
 
 .menu-childBox-left {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -76,7 +78,7 @@
 }
 
 .menu-childBox-left-fixed {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

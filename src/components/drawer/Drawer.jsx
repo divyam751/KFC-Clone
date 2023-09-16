@@ -48,7 +48,6 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
           <div className='bucketCartItems'>
             <button className='headerIconButtons'>
               <div className='cartIcon'>
-                <img src={cartBucketIcon} alt='bucketIcon' />
                 <div className='cartIconCount'>{cartIconCount}</div>
               </div>
             </button>

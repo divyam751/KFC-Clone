@@ -40,7 +40,7 @@ const Card1 = ({ card, setPurchase, purchase }) => {
     <>
       <div className='menu-childCardBody'>
         <img src={card.url} alt={card.title} className='offer-cardImg' />
-        <h3>{card.title}</h3>
+        <p className='menu-cardTitle'>{card.title}</p>
         <div className='offer-cardCategory'>
           <img
             src='https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg'
@@ -49,7 +49,7 @@ const Card1 = ({ card, setPurchase, purchase }) => {
           <p>{card.varity}</p>
           <li> {card.serving}</li>
         </div>
-        <h2>₹ {card.price}</h2>
+        <p className='menu-cardPrice'>₹ {card.price}</p>
         <p className='offer-cardCategory-text'>{card.description}</p>
         <div className='offer-button-add'>
           <button

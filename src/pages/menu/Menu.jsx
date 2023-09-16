@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 
-import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Card1 from "./menuCards/card1/Card1";
 import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";
+import { Heading } from "@chakra-ui/react";
 
 const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
@@ -32,11 +32,10 @@ const Menu = ({ setPurchase, purchase }) => {
   const burger = cardData.burger;
   const snacks = cardData.snacks;
   const beberages = cardData.beberages;
-  // console.log(value);
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY >= 70
+      window.scrollY >= 70 && window.scrollY <= 19450
         ? setRightNavClass("menu-childBox-left-fixed")
         : setRightNavClass("menu-childBox-left");
     };
@@ -59,7 +58,7 @@ const Menu = ({ setPurchase, purchase }) => {
           <div className='menu-childBox-left-wrapper'>
             <div className={rightNavClass}>
               <img src={linesLogo} alt='' className='menu-linesLogo' />
-              <h1 className='menu-linesText'>KFC MENU</h1>
+              <Heading className='menu-linesText'>KFC MENU</Heading>
 
               <ul className='menu-childBox-left-ul'>
                 <ScrollLink
@@ -270,7 +269,9 @@ const Menu = ({ setPurchase, purchase }) => {
                 id='peri-peri-chicken'
                 className='menu-grandChild-withGrayBG'
               >
-                <h2 style={{ paddingLeft: "20px" }}>PERI PERI CHICKEN</h2>
+                <Heading style={{ paddingLeft: "20px" }}>
+                  PERI PERI CHICKEN
+                </Heading>
                 <div className='menu-childCards'>
                   <div className='menu-childCards-box'>
                     {peri?.map((card, index) => {
@@ -289,7 +290,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/* value-snackers */}
               <div id='value-snackers' className='menu-grandChild'>
-                <h1>VALUE SNACKERS</h1>
+                <Heading>VALUE SNACKERS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {value?.map((card, index) => {
@@ -308,7 +309,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/*Chiken Rolls */}
               <div id='chicken-rolls' className='menu-grandChild'>
-                <h1>CHICKEN ROLLS</h1>
+                <Heading>CHICKEN ROLLS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {chikenRolls?.map((card, index) => {
@@ -327,7 +328,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/* Chiken Buckets */}
               <div id='chicken-buckets' className='menu-grandChild'>
-                <h1>CHICKEN BUCKETS</h1>
+                <Heading>CHICKEN BUCKETS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {chikenBuckets?.map((card, index) => {
@@ -346,7 +347,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/* Biryani Buckets */}
               <div id='biryani-buckets' className='menu-grandChild'>
-                <h1>BIRYANI BUCKETS</h1>
+                <Heading>BIRYANI BUCKETS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {biryaniBuckets?.map((card, index) => {
@@ -365,7 +366,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/* Box Meals */}
               <div id='box-meals' className='menu-grandChild'>
-                <h1>BOX MEALS</h1>
+                <Heading>BOX MEALS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {boxMeals?.map((card, index) => {
@@ -384,7 +385,7 @@ const Menu = ({ setPurchase, purchase }) => {
               </div>
               {/* Burger */}
               <div id='burgers' className='menu-grandChild'>
-                <h1>BURGERS</h1>
+                <Heading>BURGERS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {burger?.map((card, index) => {
@@ -402,7 +403,7 @@ const Menu = ({ setPurchase, purchase }) => {
                 </div>
               </div>
               <div id='snacks' className='menu-grandChild'>
-                <h1>SNACKS</h1>
+                <Heading>SNACKS</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {snacks?.map((card, index) => {
@@ -420,7 +421,7 @@ const Menu = ({ setPurchase, purchase }) => {
                 </div>
               </div>
               <div id='beverages' className='menu-grandChild'>
-                <h1>BEVERAGES</h1>
+                <Heading>BEVERAGES</Heading>
                 <div className='menu-childCards2'>
                   <div className='menu-childCards-box2'>
                     {beberages?.map((card, index) => {

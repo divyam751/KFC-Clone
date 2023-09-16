@@ -1,5 +1,9 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
+.mobileNavContainer {
+    margin: -70px;
+}
+
 .title-Text {
     width: 200px;
     font-size: 43px;

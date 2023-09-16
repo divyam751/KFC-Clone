@@ -1,7 +1,7 @@
 import React from "react";
 import "./Style.css";
 import { Flex } from "@chakra-ui/react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Card2 = ({ card, setPurchase, purchase }) => {
@@ -49,7 +49,7 @@ const Card2 = ({ card, setPurchase, purchase }) => {
         />
         <div className='menu-card2-child1-desc'>
           <div className='menu-card2-child1-title'> {card.title} </div>
-          <Flex gap={10} pb={20}>
+          <Flex gap={4} pb={2}>
             <img
               src={card.point}
               alt={card.varity}
@@ -58,14 +58,17 @@ const Card2 = ({ card, setPurchase, purchase }) => {
             <p>{card.varity}</p>
             {card.serving ? <li>{card.serving}</li> : ""}
           </Flex>
-          <Flex gap={20} pb={20}>
+          <Flex gap={4} pb={2}>
             {card.oldPrice ? (
               <>
                 <h4 className='menu-card2-child1-oldPrice'>{card.oldPrice}</h4>
-                <h4> ₹ {card.price}</h4>`
+                <h4 className='menu-card2-child1-currentPrice'>
+                  ₹ {card.price}
+                </h4>
+                `
               </>
             ) : (
-              <h4> ₹ {card.price}</h4>
+              <h4 className='menu-card2-child1-currentPrice'>₹ {card.price}</h4>
             )}
           </Flex>
           <div className='card2-desc'>{card.description}</div>

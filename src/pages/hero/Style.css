@@ -1,7 +1,7 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
 .hero-Main-Contianer {
-    padding-top: 156px;
+    padding-top: 144px;
     width: 100%;
 }
 
@@ -38,6 +38,9 @@
     background-color: #edeceb;
     display: block;
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 180px;
 }
 
 .categorySection {
@@ -52,14 +55,6 @@
     grid-template-columns: repeat(4, 1fr);
     row-gap: 50px;
 }
-
-.welcomeContainer {
-    display: flex;
-    flex-direction: column;
-    padding-left: 180px;
-    margin-top: -4px;
-}
-
 
 .lineImg {
     width: 50px;
@@ -82,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 200px;
     font-family: "National 2 Condensed Bold";
     font-size: 30px;
     padding-left: 130px;
@@ -122,8 +117,19 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .categoriesContainer {
+        width: 100%;
+    }
+
     .categoriesLeft {
+        width: 200px;
         padding-left: 40px;
+        font-size: 20px;
+    }
+
+    .categoriesRight {
+        padding-left: 10px;
+        font-size: 20px;
     }
 
     .welcomeContainer {
@@ -131,8 +137,15 @@
     }
 
     .headerBottom {
-        padding-top: 20px;
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+        font-size: 12px;
+    }
+
+    .heroBottom-text {
+        font-size: 12px;
     }
 }
 
@@ -144,6 +157,10 @@
         justify-content: center;
     }
 
+    .hero-Main-Contianer {
+        padding-top: 114px;
+    }
+
     .categoriesLeft {
         padding-left: 20px;
     }
@@ -153,13 +170,14 @@
     }
 
     .headerBottom {
-        padding-top: 20px;
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+        font-size: 10px;
     }
-}
 
-@media only screen and (max-width : 325px) {
-    .headerBottom {
-        padding-top: 40px;
+    .heroBottom-text {
+        font-size: 10px;
     }
 }

@@ -40,7 +40,7 @@ function App() {
         <Navbar setBurger={setBurger} burger={burger} purchase={purchase} />
       )}
       <AllRoutes purchase={purchase} setPurchase={setPurchase} />
-      <Footer />
+
       <ToastContainer
         position='top-right'
         autoClose={5000}
@@ -53,6 +53,7 @@ function App() {
         pauseOnHover
         theme='colored'
       />
+      <Footer />
     </div>
   );
 }

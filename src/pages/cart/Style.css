@@ -3,7 +3,7 @@
 
 .cart-Body {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .cart-headerSection {
@@ -107,7 +107,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .cart-cardsSection2 {
