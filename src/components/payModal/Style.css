@@ -1,0 +1,7 @@
+ModalOverlay {
+    z-index: 100;
+    display: flex;
+    width: 400px;
+    padding-top: 400px;
+    background-color: white;
+}

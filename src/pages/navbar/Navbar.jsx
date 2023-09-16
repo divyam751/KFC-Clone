@@ -70,7 +70,6 @@ const Navbar = ({ setBurger, burger, purchase }) => {
             >
               <span className='headerPrice'>₹ {purchase.totalAmount} </span>
               <div className='cartIcon'>
-                <img src={cartBucketIcon} alt='bucketIcon' />
                 <div className='cartIconCount'>{purchase.quantity}</div>
               </div>
             </button>

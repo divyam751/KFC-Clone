@@ -5,6 +5,7 @@ import Offer from "../pages/offers/Offer";
 import Landing from "../pages/landingPage/Landing";
 import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
+import Checkout from "../pages/checkout/Checkout";
 
 const AllRoutes = ({ purchase, setPurchase }) => {
   return (
@@ -21,6 +22,10 @@ const AllRoutes = ({ purchase, setPurchase }) => {
           element={<Cart purchase={purchase} setPurchase={setPurchase} />}
         />
         <Route path='/login' element={<Login />} />
+        <Route
+          path='/checkout'
+          element={<Checkout purchase={purchase} setPurchase={setPurchase} />}
+        />
       </Routes>
     </div>
   );

@@ -103,13 +103,19 @@
 
 .cartIcon {
     display: flex;
-    height: 60px;
+    height: 80px;
+    width: 80px;
     justify-content: center;
+    align-items: center;
+    background-image: url("https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg");
+}
+
+.cartIcon-img {
+    height: 100%;
 }
 
 .cartIconCount {
-    margin-left: -34px;
-    margin-top: 25px;
+    text-align: end;
 }
 
 @media only screen and (max-width : 1024px) {

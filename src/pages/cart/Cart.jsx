@@ -153,7 +153,10 @@ const Cart = ({ purchase, setPurchase }) => {
                       className='addHopeImage'
                     />
                   </div>
-                  <button className='cart-amountBox-hopeBox-checkoutBtn'>
+                  <button
+                    className='cart-amountBox-hopeBox-checkoutBtn'
+                    onClick={() => navigate("/checkout")}
+                  >
                     <p>Checkout </p> <p> ₹ {purchase.totalAmount}</p>
                   </button>
                 </div>
