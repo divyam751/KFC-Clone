@@ -611,6 +611,7 @@
             display: flex;
             gap: 1px;
             font-size: 9px;
+            align-items: center;
         }
 
         .checkout-amountBox-offerBox-circle2 {
