@@ -10,14 +10,29 @@ import {
   Button,
 } from "@chakra-ui/react";
 import "./Style.css";
+import { useState } from "react";
 
-const PayModal = () => {
+const PayModal = ({ setPayType, payType }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [payMethod, setPayMethod] = useState("");
+
+  const handleSubmit = () => {
+    setPayType(payMethod);
+    onClose();
+  };
+
+  const handleChange = (e) => {
+    setPayMethod(e.target.value);
+  };
   return (
     <>
-      <button type='submit' onClick={onOpen} className='checkout-form-submit'>
-        Select Payment
-      </button>
+      {payType === "" ? (
+        <button onClick={onOpen} className='checkout-form-submit'>
+          Select Payment
+        </button>
+      ) : (
+        ""
+      )}
 
       <Modal isOpen={isOpen} size={"md"} onClose={onClose}>
         <ModalOverlay />
@@ -33,26 +48,42 @@ const PayModal = () => {
                   <input
                     type='radio'
                     name='paymentOption'
-                    value='Credit/Debit Card'
+                    value='Card'
+                    onChange={handleChange}
                   />
                   <span className='lable-name'>Credit/Debit Card</span>
                 </label>
               </div>
               <div className='PayModal-child'>
                 <label>
-                  <input type='radio' name='paymentOption' value='Netbanking' />
+                  <input
+                    type='radio'
+                    name='paymentOption'
+                    value='Netbanking'
+                    onChange={handleChange}
+                  />
                   <span className='lable-name'>Netbanking</span>
                 </label>
               </div>
               <div className='PayModal-child'>
                 <label>
-                  <input type='radio' name='paymentOption' value='Cash' />
+                  <input
+                    type='radio'
+                    name='paymentOption'
+                    value='Cash'
+                    onChange={handleChange}
+                  />
                   <span className='lable-name'>Cash</span>
                 </label>
               </div>
               <div className='PayModal-child'>
                 <label>
-                  <input type='radio' name='paymentOption' value='UPI' />
+                  <input
+                    type='radio'
+                    name='paymentOption'
+                    value='UPI'
+                    onChange={handleChange}
+                  />
                   <span className='lable-name'>UPI</span>
                 </label>
               </div>
@@ -63,7 +94,7 @@ const PayModal = () => {
             <Button
               colorScheme='blue'
               mr={3}
-              onClick={onClose}
+              onClick={handleSubmit}
               pl={10}
               pr={10}
               pt={4}

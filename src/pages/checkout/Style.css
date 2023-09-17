@@ -221,7 +221,6 @@
     .checkout-amountBox-button:hover {
         background-color: green;
         color: white;
-        zoom: 120%;
     }
 }
 
@@ -278,7 +277,7 @@
 /* checkout updated Styles */
 .checkout-card-child {
     width: 700px;
-    height: 800px;
+    /* min-height: 800px; */
     background-color: #F8F7F5;
     display: flex;
     flex-direction: column;
@@ -316,6 +315,34 @@
     text-align: start;
 }
 
+/* Payment Gateway Style */
+
+.checkout-payment-gateway-card {
+    width: 700px;
+    /* height: 800px; */
+    background-color: #F8F7F5;
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+    gap: 30px;
+}
+
+.checkout-payment-gateway-card-c1 {
+    display: flex;
+    width: 630px;
+    justify-content: space-between;
+}
+
+.checkout-form-input-c1 {
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1250px) {
     .checkout-storedData {
@@ -341,18 +368,22 @@
 @media only screen and (max-width: 768px) {
 
 
-    .checkout-data-parent-Empty-box-left {
+
+    .cart-data-parent-Empty-box-left {
         font-size: 40px;
     }
 
-    .checkout-data-parent-Empty-box-right {
+    .cart-data-parent-Empty-box-right {
         width: 300px;
         display: flex;
         align-items: center;
     }
 
+    .cart-storedData {
+        height: auto;
+    }
 
-    .checkout-storedData-left {
+    .cart-storedData-left {
         flex-direction: column;
         align-items: center;
         height: 100%;
@@ -360,12 +391,12 @@
         font-size: small;
     }
 
-    .checkout-storedData-right {
+    .cart-storedData-right {
         width: 320px;
         padding: 40px 0px;
     }
 
-    .checkout-amountBox-hopeBox {
+    .cart-amountBox-hopeBox {
         font-size: 10px;
     }
 
@@ -374,6 +405,58 @@
         width: 30px;
         margin-left: -10px;
     }
+
+
+    .cart-amountBox-offerBox {
+        width: 100%;
+        height: 70px;
+        background-color: #F8F7F5;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #E4002B;
+        justify-content: space-between;
+
+        .cart-amountBox-offerBox-circle1 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            margin-left: -10px;
+        }
+
+        .cart-amountBox-offerBox-text {
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .cart-amountBox-offerBox-circle2 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: -10px;
+        }
+
+        .cart-amountBox-button {
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px 10px 5px 10px;
+            font-size: 10px;
+            border: 1px solid;
+        }
+
+        .cart-amountBox-button:hover {
+            background-color: green;
+            color: white;
+            zoom: 120%;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -410,5 +493,97 @@
         width: 200px;
         display: flex;
         align-items: center;
+    }
+
+
+    /* Patch */
+
+    .checkout-card-child {
+        /* width: 320px; */
+        width: 100%;
+        /* min-height: 800px; */
+        background-color: #F8F7F5;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .checkout-form-input {
+        font-size: 20px;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .checkout-form-submit {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 80px 10px 80px;
+        border-radius: 60px;
+        background-color: #E4002B;
+        color: white;
+        border: none;
+    }
+
+    .checkout-form-submit:hover {
+        background-color: green;
+        zoom: 120%;
+        cursor: pointer;
+    }
+
+
+    .checkout-form {
+        text-align: start;
+    }
+
+    /* Payment Gateway Style */
+
+    .checkout-payment-gateway-card {
+        /* width: 320px; */
+        width: 100%;
+        /* height: 800px; */
+        background-color: #F8F7F5;
+        display: flex;
+        flex-direction: column;
+        padding-left: 35px;
+        gap: 30px;
+    }
+
+    .checkout-payment-gateway-card-c1 {
+        display: flex;
+        /* width: 320px; */
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .checkout-form-input-c1 {
+        font-size: 20px;
+        padding: 10px;
+        width: 300px;
+    }
+
+    .checkout-storedData-left {
+        flex-direction: column;
+        height: 100%;
+        /* width: 320px; */
+        width: 100%;
+    }
+
+    .checkout-storedData-right {
+        width: 100%px;
+        /* width: 320px; */
+        padding: 40px 0px;
+    }
+
+    .checkout-amoutBox {
+        width: 320px;
+
+    }
+
+    .checkout-storedData-right {
+        width: 100%;
     }
 }
