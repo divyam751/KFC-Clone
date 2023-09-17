@@ -608,6 +608,8 @@
         }
 
         .checkout-amountBox-offerBox-text {
+            display: flex;
+            gap: 1px;
             font-size: 9px;
         }
 
