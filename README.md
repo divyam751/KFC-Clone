@@ -1,98 +1,60 @@
-# KFC Website
+# KFC Clone
 
-This is a simple KFC website built using React JS, Chakra UI, and React Router DOM. This project aims to showcase a basic web application for a fast-food restaurant like KFC, demonstrating the use of modern web development technologies and best practices.
+Welcome to the KFC Clone project! This is a solo project that replicates the functionality and design of the famous fast-food restaurant, KFC. The project consists of both a backend and a frontend, utilizing JSON Server for the backend deployed on Render, and React with Chakra UI for the frontend deployed on Vercel.
 
-## Table of Contents
 
-- [Demo](#demo)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+## Deployment
 
-## Demo
+- **Backend:** The JSON Server backend is deployed on [Render](https://kfc-2yef.onrender.com/). The server handles data storage and retrieval, providing the necessary APIs for the frontend.
 
-You can check out the live demo of the KFC website [here](https://example.com).
+- **Frontend:** The React frontend with Chakra UI is deployed on [Vercel](https://dc-kfc.vercel.app/). It offers a user-friendly interface for customers to interact with the KFC Clone website. You can access the deployed website by clicking [here](https://dc-kfc.vercel.app/).
 
-## Features
+Now, users can easily find and visit the KFC Clone website using the provided link.
 
-- **Home Page:** A welcoming page with an enticing hero section and links to different sections of the website.
-- **Menu Page:** Displaying KFC's menu with categories and items.
-- **Location Page:** Showing KFC restaurant locations on a map.
-- **Contact Page:** Providing contact information and a feedback form.
-- **Responsive Design:** The website is designed to be responsive for different screen sizes and devices.
-- **Navigation:** Implemented using React Router DOM for smooth navigation between pages.
-- **Styling:** Utilizes Chakra UI for a consistent and visually appealing design.
-- **Routing:** React Router DOM is used for handling navigation between different pages.
-- **State Management:** Uses React's built-in state management for handling user interactions.
 
-## Installation
 
-To run this project locally, follow these steps:
+## Functionality
 
-1. Clone the repository to your local machine:
+The KFC Clone project offers a wide range of features to enhance the user experience:
 
-   ```bash
-   git clone https://github.com/your-username/kfc-website.git
-   ```
+### Searching
+- **Search Products**: Users can search for specific menu items using a search bar. The search functionality provides real-time results, making it easy to find desired items quickly.
 
-2. Navigate to the project directory:
+### Sorting
+- **Sort by Categories**: Menu items are categorized (e.g., chicken, burgers, sides) and can be sorted by category for easier navigation.
+- **Price Sorting**: Users can sort menu items by price, allowing them to find items that fit their budget.
 
-   ```bash
-   cd kfc-website
-   ```
+### Debouncing
+- **Debounced Search**: To improve performance, the search functionality is debounced, ensuring that searches are executed efficiently without overloading the server with unnecessary requests.
 
-3. Install the project dependencies using npm or yarn:
+### Navigation
+- **Smooth Navigation**: The website offers a smooth and intuitive navigation experience. Users can easily move between different sections and pages using a user-friendly navigation menu.
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+### Responsive Design
+- **Mobile-Friendly**: The KFC Clone website is designed to be fully responsive, ensuring a seamless and visually appealing experience on various devices, including smartphones, tablets, and desktops. The layout and content adapt to different screen sizes.
 
-4. Create a `.env` file in the root directory with the necessary environment variables. For example:
 
-   ```
-   REACT_APP_API_KEY=your_api_key
-   ```
 
-5. Start the development server:
+## Deployment
 
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+- **Backend:** The JSON Server backend is deployed on [Render](https://render.com/). The server handles data storage and retrieval, providing the necessary APIs for the frontend.
 
-6. Open your web browser and access the website at `http://localhost:3000`.
+- **Frontend:** The React frontend with Chakra UI is deployed on [Vercel](https://vercel.com/). It offers a user-friendly interface for customers to interact with the KFC Clone website. You can access the deployed website by clicking [here](https://dc-kfc.vercel.app/).
 
-## Usage
+The KFC Clone project is designed to provide users with a complete and engaging experience, including advanced search and sorting options, responsive design, and smooth navigation. We hope you enjoy exploring and using this fast-food ordering platform! If you have any questions or feedback, please don't hesitate to reach out.
 
-This KFC website is intended as a starting point for further development. You can customize and extend it as needed for your specific requirements. Some possible enhancements include:
 
-- Adding more pages or sections to the website.
-- Integrating with a backend server to handle user data, orders, and feedback.
-- Implementing user authentication for personalized experiences.
-- Enhancing the menu section with images, descriptions, and prices for each item.
 
-Feel free to explore the code and make modifications to suit your project's needs.
 
-## Dependencies
+## Screenshots
+![1](https://github.com/divyam751/kfc/assets/125983433/23e63fa8-7d58-4335-8c16-2d949ed573f9)
+![2](https://github.com/divyam751/kfc/assets/125983433/b12e16d2-2175-46af-989d-6260907ccde4)
+![3](https://github.com/divyam751/kfc/assets/125983433/9f23cb96-a352-4c10-bb22-e7a63676ce52)
+![5](https://github.com/divyam751/kfc/assets/125983433/9d3087a2-02d3-4bae-83bc-c7604e532ad2)
 
-This project relies on the following major dependencies:
 
-- React: A JavaScript library for building user interfaces.
-- Chakra UI: A simple, modular, and accessible component library for React.
-- React Router DOM: A popular library for handling routing and navigation in React applications.
 
-You can find the complete list of dependencies in the `package.json` file.
 
-## Contributing
+Thank you for checking out the KFC Clone project! We hope you enjoy exploring and using this fast-food ordering platform. If you have any questions or feedback, please don't hesitate to reach out.
 
-Contributions to this project are welcome! If you find any issues or have ideas for improvements, please open an issue or submit a pull request. Make sure to follow the project's coding guidelines and standards.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE). You are free to use and modify it for your purposes.
+**Note:** This project is for educational purposes and is not affiliated with KFC in any way. All product names, logos, and trademarks are the property of their respective owners.
