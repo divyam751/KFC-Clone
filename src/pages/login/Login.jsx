@@ -1,12 +1,29 @@
 import React, { useState } from "react";
 import "./Style.css";
 import logo from "../../assets/kfcLogo.svg";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [mob, setMob] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log(mob);
+    toast.success("Verification Successful!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setTimeout(() => {
+      navigate("/menu");
+    }, 3000);
   };
 
   const navigate = useNavigate();
@@ -23,11 +40,13 @@ const Login = () => {
 
         <form onSubmit={handleSubmit} className='login-form'>
           <input
-            type='text'
+            type='number'
             placeholder='Phone Number*'
             value={mob}
             onChange={(e) => setMob(e.target.value)}
             className='login-input'
+            maxLength={10}
+            required
           />
           <div className='login-form-text'>
             By “logging in to KFC”, you agree to our

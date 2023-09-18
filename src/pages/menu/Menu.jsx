@@ -3,7 +3,7 @@ import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 
 import { BsSearch } from "react-icons/bs";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import Card1 from "./menuCards/card1/Card1";
 import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";

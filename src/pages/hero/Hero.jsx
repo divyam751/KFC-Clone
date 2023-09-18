@@ -5,10 +5,16 @@ import lineImg from "../../assets/mobileLogo.png";
 import axios from "axios";
 import Categories from "../../components/categoriesCard/Categories";
 import Loader from "../../components/loader/Loader";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/menu");
+  };
   const fethData = () => {
     setLoading(true);
     axios
@@ -20,14 +26,15 @@ const Hero = () => {
   useEffect(() => {
     fethData();
   }, []);
-  console.log(data);
   return (
     <div className='hero-Main-Contianer'>
       <div className='headerBottom'>
         <div className='heroBottom-text'>
           LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
         </div>
-        <button className='startOrderBtn'>Start Order</button>
+        <button className='startOrderBtn' onClick={handleClick}>
+          Start Order
+        </button>
       </div>
       <Carousel />
       <div className='welcomeContainer'>
