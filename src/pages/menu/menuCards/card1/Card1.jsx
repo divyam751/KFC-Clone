@@ -27,7 +27,7 @@ const Card1 = ({ card, setPurchase, purchase }) => {
     setPurchase(updatedPurchase);
     toast.success("🍗 Item added to cart!", {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
