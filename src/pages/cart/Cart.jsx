@@ -107,7 +107,7 @@ const Cart = ({ purchase, setPurchase }) => {
                         src='https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg'
                         alt=''
                       />
-                      Apply Offers & Deals
+                      <p>Apply Offers & Deals</p>
                     </div>
                     <button
                       className='cart-amountBox-button'
