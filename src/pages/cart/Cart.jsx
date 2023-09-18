@@ -55,7 +55,7 @@ const Cart = ({ purchase, setPurchase }) => {
 
           <div className='cart-data-parent-Empty-box'>
             <div className='cart-data-parent-Empty-box-left'>
-              YOUR CART IS EMPTY. LET'S START AN ORDER!
+              <p>YOUR CART IS EMPTY. LET'S START AN ORDER!</p>
               <button
                 className='cart-empty-Start-button'
                 onClick={() => navigate("/menu")}

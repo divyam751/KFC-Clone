@@ -94,10 +94,11 @@
 
 .login-guest-button {
     padding: 15px 80px 15px 80px;
-    border-radius: 30px;
+    border-radius: 50px;
     color: black;
     background-color: white;
     font-size: 25px;
+    border: 1px solid;
 }
 
 @media only screen and (max-width:720px) {
@@ -138,6 +139,13 @@
         justify-content: center;
         align-items: center;
         height: 30px;
+    }
+
+    .Login-links {
+        text-decoration: underline;
+        padding-left: 2px;
+        padding-right: 2px;
+        font-weight: bold;
     }
 
     .login-submit-btn {

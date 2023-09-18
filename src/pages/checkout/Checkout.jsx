@@ -3,7 +3,8 @@ import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 import { useNavigate } from "react-router-dom";
 import PayModal from "../../components/payModal/PayModal";
-import { Button, Flex, Heading, Select } from "@chakra-ui/react";
+import { Button, Heading, Select } from "@chakra-ui/react";
+import Payment from "../payment/Payment";
 
 const initialUserData = {
   name: "",
@@ -26,10 +27,26 @@ const Checkout = ({ purchase, setPurchase }) => {
   const [showPayBtn, setShowPayBtn] = useState(false);
   const [paymentDetails, setPaymentDetails] = useState(initialPaymentDetails);
   const [payType, setPayType] = useState("");
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [trigger, setTrigger] = useState(false);
+
+  const openPaymentModal = () => {
+    setIsPaymentModalOpen(true);
+    setTrigger(true);
+  };
+
+  const closePaymentModal = () => {
+    setIsPaymentModalOpen(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userData);
+    setUserData((prevUserData) => {
+      console.log(prevUserData);
+      return prevUserData;
+    });
+
+    console.log(paymentDetails);
   };
 
   const navigate = useNavigate();
@@ -64,6 +81,7 @@ const Checkout = ({ purchase, setPurchase }) => {
                       setUserData({ ...userData, name: e.target.value })
                     }
                     className='checkout-form-input'
+                    required
                   />
                   <input
                     type='number'
@@ -73,6 +91,7 @@ const Checkout = ({ purchase, setPurchase }) => {
                       setUserData({ ...userData, phoneNumber: e.target.value })
                     }
                     className='checkout-form-input'
+                    required
                   />
                   <input
                     type='email'
@@ -82,6 +101,7 @@ const Checkout = ({ purchase, setPurchase }) => {
                       setUserData({ ...userData, email: e.target.value })
                     }
                     className='checkout-form-input'
+                    required
                   />
                   <textarea
                     placeholder='Delivery Address*'
@@ -93,15 +113,16 @@ const Checkout = ({ purchase, setPurchase }) => {
                       })
                     }
                     className='checkout-form-input'
+                    required
                   />
-                  <PayModal setPayType={setPayType} payType={payType} />
                 </form>
+                <PayModal
+                  setPayType={setPayType}
+                  payType={payType}
+                  userData={userData}
+                />
                 {payType === "Card" ? (
-                  // <div className='checkout-payment-gateway-card'>
-                  <form
-                    onSubmit={handleSubmit}
-                    className='checkout-payment-gateway-card'
-                  >
+                  <div className='checkout-payment-gateway-card'>
                     <Heading>Card Details</Heading>
                     <input
                       type='text'
@@ -114,9 +135,10 @@ const Checkout = ({ purchase, setPurchase }) => {
                         })
                       }
                       className='checkout-form-input'
+                      required
                     />
                     <input
-                      type='text'
+                      type='number'
                       placeholder='Card Number*'
                       value={paymentDetails.CardNumber}
                       onChange={(e) =>
@@ -132,6 +154,7 @@ const Checkout = ({ purchase, setPurchase }) => {
                         type='text'
                         placeholder='MM / YY*'
                         value={paymentDetails.ExpDate}
+                        maxLength={5}
                         onChange={(e) =>
                           setPaymentDetails({
                             ...paymentDetails,
@@ -154,9 +177,8 @@ const Checkout = ({ purchase, setPurchase }) => {
                         className='checkout-form-input-c1'
                       />
                     </div>
-                  </form>
-                ) : // </div>
-                payType === "Netbanking" ? (
+                  </div>
+                ) : payType === "Netbanking" ? (
                   <div className='checkout-payment-gateway-card'>
                     <Heading>Bank Details</Heading>
                     <Select>
@@ -185,7 +207,7 @@ const Checkout = ({ purchase, setPurchase }) => {
                   </div>
                 ) : payType === "Cash" ? (
                   <div className='checkout-payment-gateway-card'>
-                    <Heading>Payment</Heading>
+                    <Heading textAlign={"start"}>Payment</Heading>
                     <input
                       type='text'
                       placeholder='Cash*'
@@ -212,6 +234,16 @@ const Checkout = ({ purchase, setPurchase }) => {
                     colorScheme='blue'
                     mr={3}
                     onClick={() => {
+                      if (
+                        (paymentDetails.CardHolderName === "" ||
+                          paymentDetails.CVV === "" ||
+                          paymentDetails.CardNumber === "" ||
+                          paymentDetails.ExpDate === "") &&
+                        payType === "Card"
+                      ) {
+                        alert("Invalid Details");
+                        return;
+                      }
                       setShowPayBtn("true");
                       console.log(paymentDetails);
                     }}
@@ -264,10 +296,15 @@ const Checkout = ({ purchase, setPurchase }) => {
                       : "checkout-amountBox-hopeBox-checkoutBtn-disabled"
                   }
                   disabled={!showPayBtn}
-                  onClick={() => alert("clicked")}
+                  onClick={openPaymentModal}
                 >
                   <p>Continue to Payment </p> <p> ₹ {purchase.totalAmount}</p>
                 </button>
+                <Payment
+                  isOpen={isPaymentModalOpen}
+                  onClose={closePaymentModal}
+                  trigger={trigger}
+                />
               </div>
             </div>
           </div>

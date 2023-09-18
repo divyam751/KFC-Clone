@@ -50,8 +50,14 @@ const Login = () => {
           />
           <div className='login-form-text'>
             By “logging in to KFC”, you agree to our
-            <a href='/#'>Privacy Policy</a> and{" "}
-            <a href='/#'>Terms & Conditions</a>
+            <a href='/#' className='Login-links'>
+              {" "}
+              <u>Privacy Policy</u>
+            </a>{" "}
+            and{" "}
+            <a href='/#' className='Login-links'>
+              <u>Terms & Conditions</u>
+            </a>
           </div>
           <div className='login-submit-btnBox'>
             <button type='submit' className='login-submit-btn'>

@@ -12,9 +12,22 @@ import {
 import "./Style.css";
 import { useState } from "react";
 
-const PayModal = ({ setPayType, payType }) => {
+const PayModal = ({ setPayType, payType, userData }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [payMethod, setPayMethod] = useState("");
+
+  const validation = () => {
+    if (
+      userData.name === "" ||
+      userData.email === "" ||
+      userData.phoneNumber === "" ||
+      userData.deliveryAddress === ""
+    ) {
+      alert("Please Enter Correct Details");
+      return;
+    }
+    onOpen();
+  };
 
   const handleSubmit = () => {
     setPayType(payMethod);
@@ -27,7 +40,7 @@ const PayModal = ({ setPayType, payType }) => {
   return (
     <>
       {payType === "" ? (
-        <button onClick={onOpen} className='checkout-form-submit'>
+        <button onClick={validation} className='checkout-form-submit'>
           Select Payment
         </button>
       ) : (
