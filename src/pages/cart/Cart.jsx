@@ -106,6 +106,7 @@ const Cart = ({ purchase, setPurchase }) => {
                       <img
                         src='https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg'
                         alt=''
+                        className='cart-percent-icon'
                       />
                       <p>Apply Offers & Deals</p>
                     </div>
