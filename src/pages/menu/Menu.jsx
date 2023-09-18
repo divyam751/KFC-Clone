@@ -7,7 +7,8 @@ import { Link as ScrollLink } from "react-scroll";
 import Card1 from "./menuCards/card1/Card1";
 import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";
-import { Heading } from "@chakra-ui/react";
+import { Button, Flex, Heading } from "@chakra-ui/react";
+import MobSearch from "../../components/mobSearch/MobSearch";
 
 const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
@@ -16,6 +17,17 @@ const Menu = ({ setPurchase, purchase }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [searchState, setSearchState] = useState(false);
+
+  // Mobile Menu Search
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleOpenDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+  };
 
   const fetchData = async () => {
     await axios
@@ -202,10 +214,15 @@ const Menu = ({ setPurchase, purchase }) => {
           </div>
           <div className='menu-childBox-right'>
             <div className='menu-mob-navbar'>
-              <div className='menu-searchIconBox'>
+              <div className='menu-searchIconBox' onClick={handleOpenDrawer}>
                 <BsSearch size={20} />
               </div>
-
+              <MobSearch
+                isOpen={isDrawerOpen}
+                onClose={handleCloseDrawer}
+                searchInput={searchInput}
+                handleSearchInputChange={handleSearchInputChange}
+              />
               <ul className='menu-childBox-left-ul'>
                 <ScrollLink
                   to='peri-peri-chicken'
@@ -314,7 +331,20 @@ const Menu = ({ setPurchase, purchase }) => {
             <div className='menu-menuCards-Section'>
               {searchState ? (
                 <div id='value-snackers' className='menu-grandChild'>
-                  <Heading>Searched Results : {searchResults.length} </Heading>
+                  <Flex gap={20}>
+                    <Heading>
+                      Searched Results : {searchResults.length}{" "}
+                    </Heading>
+                    <Button
+                      colorScheme='whatsapp'
+                      onClick={() => {
+                        setSearchInput("");
+                        setSearchState(false);
+                      }}
+                    >
+                      Clear Results
+                    </Button>
+                  </Flex>
                   <div className='menu-childCards2'>
                     <div className='menu-childCards-box2'>
                       {searchResults?.map((card, index) => {

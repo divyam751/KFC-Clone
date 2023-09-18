@@ -1,0 +1,44 @@
+@import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
+
+.mobileSearchContainer {
+    margin: -70px;
+}
+
+.title-Text {
+    width: 200px;
+    font-size: 43px;
+    font-weight: 700;
+    padding: 20px 0px 20px 0px;
+    font-family: "National 2 Condensed Bold";
+}
+
+.mobileNav {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(249, 245, 245);
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+}
+
+
+.mobileNavImages {
+    width: 130px;
+}
+
+.mobile-component-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    font-size: large;
+}
+
+.mobileFooterNav {
+    display: block;
+    padding: 20px;
+    background-color: rgb(249, 245, 245);
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+}
