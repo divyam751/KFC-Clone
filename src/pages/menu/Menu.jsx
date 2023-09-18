@@ -13,6 +13,10 @@ const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
   const [rightNavClass, setRightNavClass] = useState("menu-childBox-left");
 
+  const [searchInput, setSearchInput] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchState, setSearchState] = useState(false);
+
   const fetchData = async () => {
     await axios
       .get("https://kfc-2yef.onrender.com/menu")
@@ -23,6 +27,7 @@ const Menu = ({ setPurchase, purchase }) => {
     fetchData();
   }, []);
 
+  const combinedData = [];
   const peri = cardData.peri;
   const value = cardData.value;
   const chikenRolls = cardData.chikenRolls;
@@ -32,12 +37,25 @@ const Menu = ({ setPurchase, purchase }) => {
   const burger = cardData.burger;
   const snacks = cardData.snacks;
   const beberages = cardData.beberages;
+  if (peri) {
+    combinedData.push(...peri);
+    combinedData.push(...value);
+    combinedData.push(...chikenBuckets);
+    combinedData.push(...chikenRolls);
+    combinedData.push(...biryaniBuckets);
+    combinedData.push(...boxMeals);
+    combinedData.push(...burger);
+    combinedData.push(...snacks);
+    combinedData.push(...beberages);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY >= 70 && window.scrollY <= 19450
-        ? setRightNavClass("menu-childBox-left-fixed")
-        : setRightNavClass("menu-childBox-left");
+      if (searchInput === "") {
+        window.scrollY >= 70 && window.scrollY <= 19450
+          ? setRightNavClass("menu-childBox-left-fixed")
+          : setRightNavClass("menu-childBox-left");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +63,35 @@ const Menu = ({ setPurchase, purchase }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [searchInput]);
+
+  const debounce = (func, delay) => {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), delay);
+    };
+  };
+  const handleSearchInputChange = (event) => {
+    const input = event.target.value;
+    if (input !== "") {
+      setSearchState(true);
+    } else {
+      setSearchState(false);
+    }
+    setSearchInput(input);
+    debouncedSearch(input);
+  };
+
+  const search = (input) => {
+    const results = combinedData.filter((item) => {
+      return item.title.toLowerCase().includes(input.toLowerCase());
+    });
+
+    setSearchResults(results);
+  };
+
+  const debouncedSearch = debounce(search, 300);
 
   return (
     <div className='menu-Body'>
@@ -156,7 +202,7 @@ const Menu = ({ setPurchase, purchase }) => {
           </div>
           <div className='menu-childBox-right'>
             <div className='menu-mob-navbar'>
-              <div className='menu-searchIconBox' onClick={() => {}}>
+              <div className='menu-searchIconBox'>
                 <BsSearch size={20} />
               </div>
 
@@ -260,184 +306,209 @@ const Menu = ({ setPurchase, purchase }) => {
                   type='search'
                   className='menu-search-input'
                   placeholder='Search our menu'
+                  value={searchInput}
+                  onChange={handleSearchInputChange}
                 />
               </div>
             </div>
             <div className='menu-menuCards-Section'>
-              {/*peri-peri-chicken  */}
-              <div
-                id='peri-peri-chicken'
-                className='menu-grandChild-withGrayBG'
-              >
-                <Heading style={{ paddingLeft: "20px" }}>
-                  PERI PERI CHICKEN
-                </Heading>
-                <div className='menu-childCards'>
-                  <div className='menu-childCards-box'>
-                    {peri?.map((card, index) => {
-                      return (
-                        <div className='menu-periperi' key={index}>
-                          <Card1
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+              {searchState ? (
+                <div id='value-snackers' className='menu-grandChild'>
+                  <Heading>Searched Results : {searchResults.length} </Heading>
+                  <div className='menu-childCards2'>
+                    <div className='menu-childCards-box2'>
+                      {searchResults?.map((card, index) => {
+                        return (
+                          <div className='value-snackers' key={index}>
+                            <Card2
+                              card={card}
+                              setPurchase={setPurchase}
+                              purchase={purchase}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* value-snackers */}
-              <div id='value-snackers' className='menu-grandChild'>
-                <Heading>VALUE SNACKERS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {value?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+              ) : (
+                <>
+                  {/*peri-peri-chicken  */}
+                  <div
+                    id='peri-peri-chicken'
+                    className='menu-grandChild-withGrayBG'
+                  >
+                    <Heading style={{ paddingLeft: "20px" }}>
+                      PERI PERI CHICKEN
+                    </Heading>
+                    <div className='menu-childCards'>
+                      <div className='menu-childCards-box'>
+                        {peri?.map((card, index) => {
+                          return (
+                            <div className='menu-periperi' key={index}>
+                              <Card1
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              {/*Chiken Rolls */}
-              <div id='chicken-rolls' className='menu-grandChild'>
-                <Heading>CHICKEN ROLLS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {chikenRolls?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/* value-snackers */}
+                  <div id='value-snackers' className='menu-grandChild'>
+                    <Heading>VALUE SNACKERS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {value?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              {/* Chiken Buckets */}
-              <div id='chicken-buckets' className='menu-grandChild'>
-                <Heading>CHICKEN BUCKETS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {chikenBuckets?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/*Chiken Rolls */}
+                  <div id='chicken-rolls' className='menu-grandChild'>
+                    <Heading>CHICKEN ROLLS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {chikenRolls?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              {/* Biryani Buckets */}
-              <div id='biryani-buckets' className='menu-grandChild'>
-                <Heading>BIRYANI BUCKETS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {biryaniBuckets?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/* Chiken Buckets */}
+                  <div id='chicken-buckets' className='menu-grandChild'>
+                    <Heading>CHICKEN BUCKETS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {chikenBuckets?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              {/* Box Meals */}
-              <div id='box-meals' className='menu-grandChild'>
-                <Heading>BOX MEALS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {boxMeals?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/* Biryani Buckets */}
+                  <div id='biryani-buckets' className='menu-grandChild'>
+                    <Heading>BIRYANI BUCKETS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {biryaniBuckets?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              {/* Burger */}
-              <div id='burgers' className='menu-grandChild'>
-                <Heading>BURGERS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {burger?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/* Box Meals */}
+                  <div id='box-meals' className='menu-grandChild'>
+                    <Heading>BOX MEALS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {boxMeals?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div id='snacks' className='menu-grandChild'>
-                <Heading>SNACKS</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {snacks?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  {/* Burger */}
+                  <div id='burgers' className='menu-grandChild'>
+                    <Heading>BURGERS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {burger?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div id='beverages' className='menu-grandChild'>
-                <Heading>BEVERAGES</Heading>
-                <div className='menu-childCards2'>
-                  <div className='menu-childCards-box2'>
-                    {beberages?.map((card, index) => {
-                      return (
-                        <div className='value-snackers' key={index}>
-                          <Card2
-                            card={card}
-                            setPurchase={setPurchase}
-                            purchase={purchase}
-                          />
-                        </div>
-                      );
-                    })}
+                  <div id='snacks' className='menu-grandChild'>
+                    <Heading>SNACKS</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {snacks?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <div id='beverages' className='menu-grandChild'>
+                    <Heading>BEVERAGES</Heading>
+                    <div className='menu-childCards2'>
+                      <div className='menu-childCards-box2'>
+                        {beberages?.map((card, index) => {
+                          return (
+                            <div className='value-snackers' key={index}>
+                              <Card2
+                                card={card}
+                                setPurchase={setPurchase}
+                                purchase={purchase}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

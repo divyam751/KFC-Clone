@@ -3,6 +3,8 @@ import "./Style.css";
 import { Flex } from "@chakra-ui/react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import cardPointN from "../../../../assets/NonVeg.svg";
+import cardPointV from "../../../../assets/Veg.svg";
 
 const Card2 = ({ card, setPurchase, purchase }) => {
   const handleClick = ({ card }) => {
@@ -51,7 +53,7 @@ const Card2 = ({ card, setPurchase, purchase }) => {
           <div className='menu-card2-child1-title'> {card.title} </div>
           <Flex gap={4} pb={2}>
             <img
-              src={card.point}
+              src={card.varity === "Non veg" ? cardPointN : cardPointV}
               alt={card.varity}
               className='menu-card2-child1-point'
             />
