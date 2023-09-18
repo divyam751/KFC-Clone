@@ -102,13 +102,13 @@ const Cart = ({ purchase, setPurchase }) => {
                   </Heading>
                   <div className='cart-amountBox-offerBox'>
                     <div className='cart-amountBox-offerBox-circle1'></div>
-                    <span className='cart-amountBox-offerBox-text'>
+                    <div className='cart-amountBox-offerBox-text'>
                       <img
                         src='https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg'
                         alt=''
                       />
                       Apply Offers & Deals
-                    </span>
+                    </div>
                     <button
                       className='cart-amountBox-button'
                       onClick={() => navigate("/offers")}

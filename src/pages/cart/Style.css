@@ -188,7 +188,7 @@
     }
 
     .cart-amountBox-offerBox-text {
-        font-size: 10px;
+        font-size: 15px;
         display: flex;
         align-items: center;
         gap: 2px;
@@ -327,7 +327,7 @@
         }
 
         .cart-amountBox-offerBox-text {
-            font-size: 10px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             gap: 2px;
