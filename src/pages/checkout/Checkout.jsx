@@ -237,10 +237,6 @@ const Checkout = ({ purchase, setPurchase }) => {
                 <div className='checkout-amountBox-offerBox'>
                   <div className='checkout-amountBox-offerBox-circle1'></div>
                   <span className='checkout-amountBox-offerBox-text'>
-                    <img
-                      src='https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg'
-                      alt=''
-                    />
                     <span> Apply Offers & Deals</span>
                   </span>
                   <button

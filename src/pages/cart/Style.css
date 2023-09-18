@@ -188,15 +188,11 @@
     }
 
     .cart-amountBox-offerBox-text {
-        font-size: 15px;
+        font-size: 18px;
         display: flex;
         align-items: center;
         gap: 3px;
 
-        .cart-percent-icon {
-            width: 20px;
-            height: 20px;
-        }
     }
 
     .cart-amountBox-button {
@@ -332,15 +328,11 @@
         }
 
         .cart-amountBox-offerBox-text {
-            font-size: 15px;
+            font-size: 18px;
             display: flex;
             align-items: center;
             gap: 3px;
 
-            .cart-percent-icon {
-                width: 20px;
-                height: 20px;
-            }
         }
 
         .cart-amountBox-button {
