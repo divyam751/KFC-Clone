@@ -4,13 +4,17 @@ import Carousel from "../../components/carousel/Carousel";
 import lineImg from "../../assets/mobileLogo.png";
 import axios from "axios";
 import Categories from "../../components/categoriesCard/Categories";
+import Loader from "../../components/loader/Loader";
 
 const Hero = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const fethData = () => {
+    setLoading(true);
     axios
       .get("https://kfc-2yef.onrender.com/categories")
-      .then((res) => setData(res.data));
+      .then((res) => setData(res.data))
+      .then(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -38,16 +42,21 @@ const Hero = () => {
           <div className='horizontalLine'></div>
         </div>
       </div>
+
       <div className='categorySection'>
-        <div className='categoryCards'>
-          {data.map((item) => {
-            return (
-              <div key={item.id}>
-                <Categories url={item.url} categoryName={item.categoryName} />
-              </div>
-            );
-          })}
-        </div>
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className='categoryCards'>
+            {data.map((item) => {
+              return (
+                <div key={item.id}>
+                  <Categories url={item.url} categoryName={item.categoryName} />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

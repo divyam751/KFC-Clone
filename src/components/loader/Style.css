@@ -1,0 +1,41 @@
+.custom-loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+}
+
+.custom-loader:before,
+.custom-loader:after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: #E4002B;
+    -webkit-mask: repeating-linear-gradient(#000 0 10px, #0000 0 20px);
+    animation: sh5 1s infinite;
+}
+
+.custom-loader:after {
+    -webkit-mask: repeating-linear-gradient(#0000 0 10px, #000 0 20px);
+    --s: -1;
+}
+
+@keyframes sh5 {
+
+    0%,
+    10% {
+        transform: translate(0) rotate(0)
+    }
+
+    35% {
+        transform: translate(calc(var(--s, 1)*50%)) rotate(0)
+    }
+
+    66% {
+        transform: translate(calc(var(--s, 1)*50%)) rotate(calc(var(--s, 1)*180deg))
+    }
+
+    90%,
+    100% {
+        transform: translate(0) rotate(calc(var(--s, 1)*180deg))
+    }
+}
