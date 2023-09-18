@@ -35,10 +35,12 @@
 }
 
 .mobileFooterNav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    gap: 10px;
     background-color: rgb(249, 245, 245);
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     margin: 20px 0px 20px 0px;
 }

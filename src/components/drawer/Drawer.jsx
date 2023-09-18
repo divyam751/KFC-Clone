@@ -17,7 +17,7 @@ import offerImg from "../../assets/offer.png";
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-function CustomDrawer({ isOpen, onClose, cartIconCount }) {
+function CustomDrawer({ isOpen, onClose, purchase }) {
   const navigate = useNavigate();
   return (
     <Drawer isOpen={isOpen} onClose={onClose} size='full' placement='left'>
@@ -44,11 +44,24 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
               border: "none",
             }}
           />
-          <img src={logo} alt='' />
+          <img
+            src={logo}
+            alt='logo'
+            onClick={() => {
+              navigate("/");
+              onClose();
+            }}
+          />
           <div className='bucketCartItems'>
             <button className='headerIconButtons'>
-              <div className='cartIcon'>
-                <div className='cartIconCount'>{cartIconCount}</div>
+              <div
+                className='cartIcon'
+                onClick={() => {
+                  navigate("/cart");
+                  onClose();
+                }}
+              >
+                <div className='cartIconCount'>{purchase.quantity}</div>
               </div>
             </button>
           </div>
@@ -59,16 +72,25 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
             <div className='mobileNavAccount'>
               <button
                 className='signInButton'
-                onClick={() => navigate("/login")}
+                onClick={() => {
+                  navigate("/login");
+                  onClose();
+                }}
               >
                 <img src={accountIcon} alt='account Icon' />
                 Sign In / Sign Up <BsArrowRight />
               </button>
             </div>
             <div className='mobileNav'>
-              <a href='/menu' className='mobile-component-link'>
-                Menu
-              </a>
+              <div
+                className='mobile-component-link'
+                onClick={() => {
+                  navigate("/menu");
+                  onClose();
+                }}
+              >
+                Menu{" "}
+              </div>
               <div className='mobileNavImages'>
                 <img
                   src={menuBurger}
@@ -78,9 +100,15 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
               </div>
             </div>
             <div className='mobileNav'>
-              <a href='/offers' className='mobile-component-link'>
+              <div
+                className='mobile-component-link'
+                onClick={() => {
+                  navigate("/offers");
+                  onClose();
+                }}
+              >
                 Deals
-              </a>
+              </div>
               <div className='mobileNavImages'>
                 <img
                   src={offerImg}
