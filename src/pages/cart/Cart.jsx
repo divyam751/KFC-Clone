@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 import linesLogo from "../../assets/mobileLogo.png";
 import { useNavigate } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import CartCards from "../../components/cartCards/CartCards";
 
 const Cart = ({ purchase, setPurchase }) => {
@@ -96,18 +96,17 @@ const Cart = ({ purchase, setPurchase }) => {
               </div>
               <div className='cart-storedData-right'>
                 <div className='cart-amoutBox'>
-                  <h2>
+                  <Heading>
                     {purchase.quantity}{" "}
                     {purchase.quantity > 1 ? " ITEMS" : " ITEM"}
-                  </h2>
+                  </Heading>
                   <div className='cart-amountBox-offerBox'>
                     <div className='cart-amountBox-offerBox-circle1'></div>
                     <span className='cart-amountBox-offerBox-text'>
-                      {" "}
                       <img
                         src='https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg'
                         alt=''
-                      />{" "}
+                      />
                       Apply Offers & Deals
                     </span>
                     <button

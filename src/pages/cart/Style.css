@@ -86,7 +86,7 @@
 
 .cart-empty-Start-button:hover {
     cursor: pointer;
-    zoom: 120%;
+    /* zoom: 120%; */
     background-color: green;
 }
 
@@ -188,9 +188,10 @@
     }
 
     .cart-amountBox-offerBox-text {
-        font-size: 15px;
+        font-size: 10px;
         display: flex;
         align-items: center;
+        gap: 2px;
     }
 
     .cart-amountBox-button {
@@ -204,7 +205,7 @@
     .cart-amountBox-button:hover {
         background-color: green;
         color: white;
-        zoom: 120%;
+        /* zoom: 120%; */
     }
 }
 
@@ -343,7 +344,7 @@
         .cart-amountBox-button:hover {
             background-color: green;
             color: white;
-            zoom: 120%;
+            /* zoom: 120%; */
         }
     }
 }
