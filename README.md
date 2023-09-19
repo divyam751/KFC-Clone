@@ -1,6 +1,15 @@
-# KFC Clone
+# KFC  🍟
+
 
 Welcome to the KFC Clone project! This is a solo project that replicates the functionality and design of the famous fast-food restaurant, KFC. The project consists of both a backend and a frontend, utilizing JSON Server for the backend deployed on Render, and React with Chakra UI for the frontend deployed on Vercel.
+
+
+
+## Table of Contents
+- [Deployment](#deployment)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
 
 
 ## Deployment
@@ -13,7 +22,7 @@ Now, users can easily find and visit the KFC Clone website using the provided li
 
 
 
-## Functionality
+## Features
 
 The KFC Clone project offers a wide range of features to enhance the user experience:
 
@@ -32,17 +41,17 @@ The KFC Clone project offers a wide range of features to enhance the user experi
 
 ### Responsive Design
 - **Mobile-Friendly**: The KFC Clone website is designed to be fully responsive, ensuring a seamless and visually appealing experience on various devices, including smartphones, tablets, and desktops. The layout and content adapt to different screen sizes.
-
-
-
-## Deployment
-
-- **Backend:** The JSON Server backend is deployed on [Render](https://render.com/). The server handles data storage and retrieval, providing the necessary APIs for the frontend.
-
-- **Frontend:** The React frontend with Chakra UI is deployed on [Vercel](https://vercel.com/). It offers a user-friendly interface for customers to interact with the KFC Clone website. You can access the deployed website by clicking [here](https://dc-kfc.vercel.app/).
+  
 
 The KFC Clone project is designed to provide users with a complete and engaging experience, including advanced search and sorting options, responsive design, and smooth navigation. We hope you enjoy exploring and using this fast-food ordering platform! If you have any questions or feedback, please don't hesitate to reach out.
 
+### Tech Stack
+
+KFC is built using the following technologies:
+
+- **React.js**: The core frontend library for building dynamic user interfaces.
+- **Chakra UI**: A flexible and accessible design system for creating beautiful user interfaces.
+- **JSON-Server**: A lightweight RESTful API server using a JSON file as a data source.
 
 
 
