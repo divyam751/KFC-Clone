@@ -66,4 +66,4 @@ KFC is built using the following technologies:
 
 Thank you for checking out the KFC Clone project! We hope you enjoy exploring and using this fast-food ordering platform. If you have any questions or feedback, please don't hesitate to reach out.
 
-**Note:** This project is for educational purposes and is not affiliated with KFC in any way. All product names, logos, and trademarks are the property of their respective owners.
+**Note:** This project is for educational purposes and is not affiliated with KFC in any way. All product names, logos, and trademarks are the property of their respective owners
