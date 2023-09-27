@@ -1,4 +1,4 @@
-# KFC  🍟
+# KFC-Clone  🍟
 
 
 Welcome to the KFC Clone project! This is a solo project that replicates the functionality and design of the famous fast-food restaurant, KFC. The project consists of both a backend and a frontend, utilizing JSON Server for the backend deployed on Render, and React with Chakra UI for the frontend deployed on Vercel.
