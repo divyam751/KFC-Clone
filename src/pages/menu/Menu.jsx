@@ -110,115 +110,115 @@ const Menu = ({ setPurchase, purchase }) => {
   const debouncedSearch = debounce(search, 300);
 
   return (
-    <div className='menu-Body'>
-      <div className='menu-headerSection'>
+    <div className="menu-Body">
+      <div className="menu-headerSection">
         LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
-        <button className='menu-headerSection-button'>Start Now</button>
+        <button className="menu-headerSection-button">Start Now</button>
       </div>
-      <div className='menu-parentBox'>
-        <div className='menu-childBox'>
-          <div className='menu-childBox-left-wrapper'>
+      <div className="menu-parentBox">
+        <div className="menu-childBox">
+          <div className="menu-childBox-left-wrapper">
             <div className={rightNavClass}>
-              <img src={linesLogo} alt='' className='menu-linesLogo' />
-              <Heading className='menu-linesText'>KFC MENU</Heading>
+              <img src={linesLogo} alt="" className="menu-linesLogo" />
+              <Heading className="menu-linesText">KFC MENU</Heading>
 
-              <ul className='menu-childBox-left-ul'>
+              <ul className="menu-childBox-left-ul">
                 <ScrollLink
-                  to='peri-peri-chicken'
+                  to="peri-peri-chicken"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   PERI PERI CHICKEN
                 </ScrollLink>
                 <ScrollLink
-                  to='value-snackers'
+                  to="value-snackers"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   VALUE SNACKERS
                 </ScrollLink>
                 <ScrollLink
-                  to='chicken-rolls'
+                  to="chicken-rolls"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   CHICKEN ROLLS
                 </ScrollLink>
                 <ScrollLink
-                  to='chicken-buckets'
+                  to="chicken-buckets"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   CHICKEN BUCKETS
                 </ScrollLink>
                 <ScrollLink
-                  to='biryani-buckets'
+                  to="biryani-buckets"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BIRYANI BUCKETS
                 </ScrollLink>
                 <ScrollLink
-                  to='box-meals'
+                  to="box-meals"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BOX MEALS
                 </ScrollLink>
                 <ScrollLink
-                  to='burgers'
+                  to="burgers"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BURGERS
                 </ScrollLink>
                 <ScrollLink
-                  to='snacks'
+                  to="snacks"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   SNACKS
                 </ScrollLink>
                 <ScrollLink
-                  to='beverages'
+                  to="beverages"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BEVERAGES
                 </ScrollLink>
               </ul>
             </div>
           </div>
-          <div className='menu-childBox-right'>
-            <div className='menu-mob-navbar'>
-              <div className='menu-searchIconBox' onClick={handleOpenDrawer}>
+          <div className="menu-childBox-right">
+            <div className="menu-mob-navbar">
+              <div className="menu-searchIconBox" onClick={handleOpenDrawer}>
                 <BsSearch size={20} />
               </div>
               <MobSearch
@@ -227,120 +227,120 @@ const Menu = ({ setPurchase, purchase }) => {
                 searchInput={searchInput}
                 handleSearchInputChange={handleSearchInputChange}
               />
-              <ul className='menu-childBox-left-ul'>
+              <ul className="menu-childBox-left-ul">
                 <ScrollLink
-                  to='peri-peri-chicken'
+                  to="peri-peri-chicken"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   PERI PERI CHICKEN
                 </ScrollLink>
                 <ScrollLink
-                  to='value-snackers'
+                  to="value-snackers"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   VALUE SNACKERS
                 </ScrollLink>
                 <ScrollLink
-                  to='chicken-rolls'
+                  to="chicken-rolls"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   CHICKEN ROLLS
                 </ScrollLink>
                 <ScrollLink
-                  to='chicken-buckets'
+                  to="chicken-buckets"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   CHICKEN BUCKETS
                 </ScrollLink>
                 <ScrollLink
-                  to='biryani-buckets'
+                  to="biryani-buckets"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BIRYANI BUCKETS
                 </ScrollLink>
                 <ScrollLink
-                  to='box-meals'
+                  to="box-meals"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BOX MEALS
                 </ScrollLink>
                 <ScrollLink
-                  to='burgers'
+                  to="burgers"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BURGERS
                 </ScrollLink>
                 <ScrollLink
-                  to='snacks'
+                  to="snacks"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   SNACKS
                 </ScrollLink>
                 <ScrollLink
-                  to='beverages'
+                  to="beverages"
                   spy={true}
                   smooth={true}
                   offset={-110}
                   duration={1000}
-                  className='menu-childBox-left-links'
+                  className="menu-childBox-left-links"
                 >
                   BEVERAGES
                 </ScrollLink>
               </ul>
             </div>
-            <div className='menu-searchSection'>
-              <div className='menu-searchBox'>
+            <div className="menu-searchSection">
+              <div className="menu-searchBox">
                 <BsSearch size={20} />
                 <input
-                  type='search'
-                  className='menu-search-input'
-                  placeholder='Search our menu'
+                  type="search"
+                  className="menu-search-input"
+                  placeholder="Search our menu"
                   value={searchInput}
                   onChange={handleSearchInputChange}
                 />
               </div>
             </div>
-            <div className='menu-menuCards-Section'>
+            <div className="menu-menuCards-Section">
               {searchState ? (
-                <div id='value-snackers' className='menu-grandChild'>
+                <div id="value-snackers" className="menu-grandChild">
                   <Flex gap={20}>
                     <Heading>
                       Searched Results : {searchResults.length}{" "}
                     </Heading>
                     <Button
-                      colorScheme='whatsapp'
+                      colorScheme="whatsapp"
                       onClick={() => {
                         setSearchInput("");
                         setSearchState(false);
@@ -349,11 +349,11 @@ const Menu = ({ setPurchase, purchase }) => {
                       Clear Results
                     </Button>
                   </Flex>
-                  <div className='menu-childCards2'>
-                    <div className='menu-childCards-box2'>
+                  <div className="menu-childCards2">
+                    <div className="menu-childCards-box2">
                       {searchResults?.map((card, index) => {
                         return (
-                          <div className='value-snackers' key={index}>
+                          <div className="value-snackers" key={index}>
                             <Card2
                               card={card}
                               setPurchase={setPurchase}
@@ -366,22 +366,22 @@ const Menu = ({ setPurchase, purchase }) => {
                   </div>
                 </div>
               ) : loading ? (
-                Loader
+                <Loader />
               ) : (
                 <>
                   {/*peri-peri-chicken  */}
                   <div
-                    id='peri-peri-chicken'
-                    className='menu-grandChild-withGrayBG'
+                    id="peri-peri-chicken"
+                    className="menu-grandChild-withGrayBG"
                   >
                     <Heading style={{ paddingLeft: "20px" }}>
                       PERI PERI CHICKEN
                     </Heading>
-                    <div className='menu-childCards'>
-                      <div className='menu-childCards-box'>
+                    <div className="menu-childCards">
+                      <div className="menu-childCards-box">
                         {peri?.map((card, index) => {
                           return (
-                            <div className='menu-periperi' key={index}>
+                            <div className="menu-periperi" key={index}>
                               <Card1
                                 card={card}
                                 setPurchase={setPurchase}
@@ -394,13 +394,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/* value-snackers */}
-                  <div id='value-snackers' className='menu-grandChild'>
+                  <div id="value-snackers" className="menu-grandChild">
                     <Heading>VALUE SNACKERS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {value?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -413,13 +413,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/*Chiken Rolls */}
-                  <div id='chicken-rolls' className='menu-grandChild'>
+                  <div id="chicken-rolls" className="menu-grandChild">
                     <Heading>CHICKEN ROLLS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {chikenRolls?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -432,13 +432,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/* Chiken Buckets */}
-                  <div id='chicken-buckets' className='menu-grandChild'>
+                  <div id="chicken-buckets" className="menu-grandChild">
                     <Heading>CHICKEN BUCKETS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {chikenBuckets?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -451,13 +451,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/* Biryani Buckets */}
-                  <div id='biryani-buckets' className='menu-grandChild'>
+                  <div id="biryani-buckets" className="menu-grandChild">
                     <Heading>BIRYANI BUCKETS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {biryaniBuckets?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -470,13 +470,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/* Box Meals */}
-                  <div id='box-meals' className='menu-grandChild'>
+                  <div id="box-meals" className="menu-grandChild">
                     <Heading>BOX MEALS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {boxMeals?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -489,13 +489,13 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                   {/* Burger */}
-                  <div id='burgers' className='menu-grandChild'>
+                  <div id="burgers" className="menu-grandChild">
                     <Heading>BURGERS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {burger?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -507,13 +507,13 @@ const Menu = ({ setPurchase, purchase }) => {
                       </div>
                     </div>
                   </div>
-                  <div id='snacks' className='menu-grandChild'>
+                  <div id="snacks" className="menu-grandChild">
                     <Heading>SNACKS</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {snacks?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
@@ -525,13 +525,13 @@ const Menu = ({ setPurchase, purchase }) => {
                       </div>
                     </div>
                   </div>
-                  <div id='beverages' className='menu-grandChild'>
+                  <div id="beverages" className="menu-grandChild">
                     <Heading>BEVERAGES</Heading>
-                    <div className='menu-childCards2'>
-                      <div className='menu-childCards-box2'>
+                    <div className="menu-childCards2">
+                      <div className="menu-childCards-box2">
                         {beberages?.map((card, index) => {
                           return (
-                            <div className='value-snackers' key={index}>
+                            <div className="value-snackers" key={index}>
                               <Card2
                                 card={card}
                                 setPurchase={setPurchase}
