@@ -2,8 +2,26 @@ import React from "react";
 import "./Style.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import imgPlaceholder from "../../../../assets/placeholder.webp";
 
-const Card1 = ({ card, setPurchase, purchase }) => {
+const SkeletonCard = () => (
+  <div className="menu-childCardBody card1-skeleton">
+    <div className="card1-skeleton-img">
+      <img src={imgPlaceholder} alt="placeholder" />
+    </div>
+    <div className="card1-skeleton-category">
+      <div className="card1-skeleton-text skeleton-text-large"></div>
+
+      <div className="card1-skeleton-text card1-skeleton-text-small"></div>
+      <div className="card1-skeleton-text card1-skeleton-text-small"></div>
+    </div>
+    <div className="card1-skeleton-text card1-skeleton-text-small"></div>
+    <div className="card1-skeleton-text card1-skeleton-text-large"></div>
+    <div className="card1-skeleton-button"></div>
+  </div>
+);
+
+const Card1 = ({ card, setPurchase, purchase, loading }) => {
   const handleClick = ({ card }) => {
     const localCart = JSON.parse(localStorage.getItem("cartData")) || [];
     const index = localCart.findIndex((item) => item.id === card.id);
@@ -19,10 +37,10 @@ const Card1 = ({ card, setPurchase, purchase }) => {
     const updatedPurchase = { ...purchase };
     updatedPurchase.quantity += 1;
     updatedPurchase.subTotal = parseFloat(
-      parseFloat(updatedPurchase.subTotal) + parseFloat(card.price),
+      parseFloat(updatedPurchase.subTotal) + parseFloat(card.price)
     ).toFixed(2);
     updatedPurchase.totalAmount = parseFloat(
-      updatedPurchase.subTotal * 1.05,
+      updatedPurchase.subTotal * 1.05
     ).toFixed(2);
     setPurchase(updatedPurchase);
     toast.success("🍗 Item added to cart!", {
@@ -36,35 +54,40 @@ const Card1 = ({ card, setPurchase, purchase }) => {
       theme: "dark",
     });
   };
+
   return (
     <>
-      <div className='menu-childCardBody'>
-        <img src={card.url} alt={card.title} className='offer-cardImg' />
-        <p className='menu-cardTitle'>{card.title}</p>
-        <div className='offer-cardCategory'>
-          <img
-            src='https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg'
-            alt=''
-          />
-          <p>{card.varity}</p>
-          <li> {card.serving}</li>
-        </div>
-        <p className='menu-cardPrice'>₹ {card.price}</p>
-        <p className='offer-cardCategory-text'>{card.description}</p>
-        <div className='offer-button-add'>
-          <button
-            className='offer-card-addToCart'
-            onClick={() => handleClick({ card })}
-          >
-            Add to Cart
+      {loading ? (
+        <SkeletonCard />
+      ) : (
+        <div className="menu-childCardBody">
+          <img src={card.url} alt={card.title} className="offer-cardImg" />
+          <p className="menu-cardTitle">{card.title}</p>
+          <div className="offer-cardCategory">
             <img
-              className='offee-cart-buttonImg'
-              src='https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg'
-              alt=''
+              src="https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg"
+              alt=""
             />
-          </button>
+            <p>{card.varity}</p>
+            <li>{card.serving}</li>
+          </div>
+          <p className="menu-cardPrice">₹ {card.price}</p>
+          <p className="offer-cardCategory-text">{card.description}</p>
+          <div className="offer-button-add">
+            <button
+              className="offer-card-addToCart"
+              onClick={() => handleClick({ card })}
+            >
+              Add to Cart
+              <img
+                className="offee-cart-buttonImg"
+                src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+                alt=""
+              />
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

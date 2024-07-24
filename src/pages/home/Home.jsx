@@ -20,9 +20,9 @@ const Home = () => {
     fetchData();
   }, []);
   return (
-    <div className='homeMainContianer'>
-      <img src={redLines} alt='redLine' className='redLineLogo' />
-      <div className='offersDeals'>OFFERS & DEALS</div>
+    <div className="homeMainContianer">
+      <img src={redLines} alt="redLine" className="redLineLogo" />
+      <div className="offersDeals">OFFERS & DEALS</div>
 
       <OffersCards cardData={cardData} loading={loading} />
     </div>

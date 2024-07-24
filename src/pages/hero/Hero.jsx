@@ -4,7 +4,6 @@ import Carousel from "../../components/carousel/Carousel";
 import lineImg from "../../assets/mobileLogo.png";
 import axios from "axios";
 import Categories from "../../components/categoriesCard/Categories";
-import Loader from "../../components/loader/Loader";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -55,9 +54,7 @@ const Hero = () => {
       </div>
 
       <div className="categorySection">
-        {loading ? (
-          <Loader />
-        ) : (
+        {
           <div className="categoryCards">
             {data ? (
               data?.map((item) => {
@@ -66,6 +63,7 @@ const Hero = () => {
                     <Categories
                       url={item.url}
                       categoryName={item.categoryName}
+                      loading={loading}
                     />
                   </div>
                 );
@@ -74,7 +72,7 @@ const Hero = () => {
               <h1>Something went wrong from our backend</h1>
             )}
           </div>
-        )}
+        }
       </div>
     </div>
   );

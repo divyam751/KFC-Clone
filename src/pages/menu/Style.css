@@ -1,339 +1,318 @@
 @import url(https://db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed+Bold);
 
 .menu-Body {
-    width: 100%;
-    padding-top: 90px;
-    min-height: 100vh;
+  width: 100%;
+  padding-top: 90px;
+  min-height: 100vh;
 }
 
 .menu-headerSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #202124;
-    color: white;
-    height: 70px;
-    width: 100%;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202124;
+  color: white;
+  height: 70px;
+  width: 100%;
+  gap: 20px;
 }
 
 .menu-headerSection-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    color: white;
-    padding: 10px 30px 10px 30px;
-    border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 30px;
 }
 
 .menu-parentBox {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -3px;
-    padding-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3px;
+  padding-bottom: 50px;
 }
 
 .menu-childBox {
-    width: 86%;
-    display: flex;
-    margin-top: -7px;
+  width: 86%;
+  display: flex;
+  margin-top: -7px;
 }
 
 .menu-childBox-left-wrapper {
-    width: 30%;
+  width: 30%;
 }
 
 .menu-childBox-left {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-    position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
 }
 
 .menu-linesLogo {
-    width: 70px;
+  width: 70px;
 }
 
 .menu-childBox-left-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .menu-childBox-left-ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .menu-childBox-left-links {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .menu-childBox-left-fixed {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-    position: fixed;
-    margin-top: -70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  position: fixed;
+  margin-top: -70px;
 }
 
 .menu-childBox-right {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-
 .menu-searchSection {
-    width: 100%;
-    height: 100px;
-    border-bottom: 2px solid;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 20px;
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 20px;
 }
 
 .menu-searchBox {
-    width: 80%;
-    height: 40px;
-    border-radius: 30px;
-    display: flex;
-    padding-left: 10px;
-    justify-content: flex-start;
-    align-items: center;
+  width: 80%;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .menu-search-input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    border-radius: 0px 30px 30px 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 30px 30px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
 }
-
 
 .menu-searchBox:hover {
-    border-color: orange;
+  border-color: orange;
 }
 
-
 .menu-grandChild-withGrayBG {
-    width: 100%;
-    min-height: 100vh;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F8F7F5;
-    gap: 70px;
-    align-items: flex-start;
-    margin-top: 50px;
-    padding-top: 40px;
-
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f7f5;
+  gap: 70px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-top: 40px;
 }
 
 .menu-grandChild {
-    width: 100%;
-    min-height: 100vh;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
-    align-items: flex-start;
-    margin-top: 50px;
-    padding-top: 40px;
-
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-top: 40px;
 }
 
 .menu-childCards {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-childCards-box {
-    display: flex;
-    width: 96%;
-    /* justify-content: space-between; */
-    /* justify-content: space-around; */
-    align-items: flex-start;
-    /* flex-wrap: wrap; */
-    row-gap: 50px;
+  display: flex;
+  width: 96%;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  row-gap: 50px;
 }
 
-
 .menu-childCards2 {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-childCards-box2 {
-    display: flex;
-    width: 96%;
-    justify-content: flex-start;
-    /* justify-content: space-around; */
-    flex-wrap: wrap;
-    row-gap: 50px;
+  display: flex;
+  width: 96%;
+  justify-content: flex-start;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  row-gap: 50px;
 }
 
 .menu-menuCards-Section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-mob-navbar {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu-childCards-box {
+    flex-wrap: wrap;
+  }
+
+  .menu-childBox {
+    width: 96%;
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu-childBox {
+    width: 96%;
+    padding-top: 10px;
+  }
+
+  .menu-childCards-box {
+    flex-wrap: wrap;
+  }
+
+  .menu-childCards-box2 {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-childBox-right {
+    width: 100%;
+  }
+
+  .menu-headerSection,
+  .menu-searchSection {
     display: none;
-}
+  }
 
-@media only screen and (min-width : 1200px) {
-    .menu-childCards-box {
-        flex-wrap: wrap;
-    }
+  .menu-childBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .menu-childBox {
-        width: 96%;
-        padding-top: 10px;
-    }
-}
+  .menu-childBox-left-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 10px;
+    justify-content: flex-end;
+  }
 
-@media only screen and (max-width : 1024px) {
-    .menu-childBox {
-        width: 96%;
-        padding-top: 10px;
-    }
+  .menu-childBox-left-wrapper {
+    display: none;
+  }
 
-    .menu-childCards-box {
-        flex-wrap: wrap;
-    }
+  .menu-childBox-left {
+    height: fit-content;
+    padding-top: 20px;
+  }
 
-    .menu-childCards-box2 {
-        justify-content: space-evenly;
-    }
-}
-
-@media only screen and (max-width : 768px) {
-    .menu-childBox-right {
-        width: 100%;
-    }
-
-    .menu-headerSection,
-    .menu-searchSection {
-        display: none;
-    }
-
-
-    .menu-childBox {
-
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .menu-mob-navbar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    margin-top: -5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    padding-left: 10px;
+    z-index: 5;
 
     .menu-childBox-left-ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        gap: 10px;
-        justify-content: flex-end;
-
+      list-style: none;
+      padding: 4px;
+      margin: 0;
+      display: inline-block;
     }
 
-
-    .menu-childBox-left-wrapper {
-        display: none;
+    .menu-childBox-left-links {
+      display: inline-block;
+      margin-right: 10px;
+      white-space: nowrap;
     }
 
-    .menu-childBox-left {
-        height: fit-content;
-        padding-top: 20px;
+    .menu-searchIconBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1px;
     }
-
-
-
-
-    .menu-mob-navbar {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        width: 100%;
-        position: fixed;
-        background-color: white;
-        margin-top: -5px;
-        padding-top: 5px;
-        padding-bottom: 10px;
-        margin-left: -10px;
-        padding-left: 10px;
-
-        .menu-childBox-left-ul {
-            list-style: none;
-            padding: 4px;
-            margin: 0;
-            display: inline-block;
-        }
-
-        .menu-childBox-left-links {
-            display: inline-block;
-            margin-right: 10px;
-            white-space: nowrap;
-        }
-
-        .menu-searchIconBox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1px;
-        }
-
-    }
-
-
-
+  }
 }
 
-@media only screen and (max-width:425px) {
-    .menu-scroll-container {
-        overflow-x: auto;
+@media only screen and (max-width: 425px) {
+  .menu-scroll-container {
+    overflow-x: auto;
 
-        white-space: nowrap;
-        width: 100%;
+    white-space: nowrap;
+    width: 100%;
+  }
 
-    }
+  .menu-childCards-box {
+    display: inline-block;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+  }
 
-
-
-    .menu-childCards-box {
-        display: inline-block;
-        overflow-y: auto;
-        flex-wrap: nowrap;
-    }
-
-    .menu-periperi {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
+  .menu-periperi {
+    display: inline-block;
+    margin-right: 20px;
+  }
 }

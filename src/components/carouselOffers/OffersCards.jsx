@@ -1,7 +1,24 @@
 import React, { useState } from "react";
 import "./Style.css";
 import { useNavigate } from "react-router-dom";
+import imgPlaceholder from "../../assets/placeholder.webp";
 import Loader from "../loader/Loader";
+
+const SkeletonCard = () => (
+  <div className="SingleCardBlock">
+    <div className="singleCardOffer skeleton">
+      <div className="skeleton-img">
+        <img src={imgPlaceholder} alt="Placeholder" />
+      </div>
+      <div className="skeleton-text skeleton-text-large"></div>
+      <div className="skeleton-text skeleton-text-small"></div>
+    </div>
+    <div className="cardButtonSection">
+      <div className="skeleton-button"></div>
+      <div className="skeleton-button"></div>
+    </div>
+  </div>
+);
 
 const OffersCards = ({ cardData, loading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,32 +26,36 @@ const OffersCards = ({ cardData, loading }) => {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === cardData.length - 4 ? 0 : prevIndex + 1,
+      prevIndex === cardData.length - 4 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cardData.length - 4 : prevIndex - 1,
+      prevIndex === 0 ? cardData.length - 4 : prevIndex - 1
     );
   };
 
   return (
-    <div className='ParentContainer'>
-      <div className='offerCardsMainContainer'>
-        <button onClick={prevSlide} className='OfferSliderButtonsPrv'>
+    <div className="ParentContainer">
+      <div className="offerCardsMainContainer">
+        <button onClick={prevSlide} className="OfferSliderButtonsPrv">
           &lt;
         </button>
         {loading ? (
-          <Loader />
+          <div className="offerCards-data">
+            {[...Array(3)].map((_, index) => (
+              <SkeletonCard key={index} />
+            ))}
+          </div>
         ) : (
-          <div className='offerCards-data'>
+          <div className="offerCards-data">
             {cardData
               .slice(currentIndex, currentIndex + 3)
               .map((card, index) => (
-                <div className='OfferCardSection' key={index}>
-                  <div className='SingleCardBlock'>
-                    <div className='singleCardOffer'>
+                <div className="OfferCardSection" key={index}>
+                  <div className="SingleCardBlock">
+                    <div className="singleCardOffer">
                       <img
                         src={card.url}
                         alt={card.text}
@@ -52,19 +73,18 @@ const OffersCards = ({ cardData, loading }) => {
                       <div>{card.text}</div>
                     </div>
                     <div
-                      className='cardButtonSection'
+                      className="cardButtonSection"
                       onClick={() => navigate("/offers")}
                     >
                       <p>View Details</p>
-
-                      <button className='cardButtonOffer'>Redeem</button>
+                      <button className="cardButtonOffer">Redeem</button>
                     </div>
                   </div>
                 </div>
               ))}
           </div>
         )}
-        <button onClick={nextSlide} className='OfferSliderButtonsNxt'>
+        <button onClick={nextSlide} className="OfferSliderButtonsNxt">
           &gt;
         </button>
       </div>

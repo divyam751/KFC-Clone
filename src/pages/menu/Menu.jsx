@@ -9,7 +9,6 @@ import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import MobSearch from "../../components/mobSearch/MobSearch";
-import Loader from "../../components/loader/Loader";
 
 const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
@@ -358,6 +357,7 @@ const Menu = ({ setPurchase, purchase }) => {
                               card={card}
                               setPurchase={setPurchase}
                               purchase={purchase}
+                              loading={loading}
                             />
                           </div>
                         );
@@ -365,8 +365,6 @@ const Menu = ({ setPurchase, purchase }) => {
                     </div>
                   </div>
                 </div>
-              ) : loading ? (
-                <Loader />
               ) : (
                 <>
                   {/*peri-peri-chicken  */}
@@ -386,6 +384,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -405,6 +404,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -424,6 +424,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -443,6 +444,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -462,6 +464,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -481,6 +484,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -500,6 +504,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -518,6 +523,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );
@@ -536,6 +542,7 @@ const Menu = ({ setPurchase, purchase }) => {
                                 card={card}
                                 setPurchase={setPurchase}
                                 purchase={purchase}
+                                loading={loading}
                               />
                             </div>
                           );

@@ -1,123 +1,174 @@
 .ParentContainer {
-    display: flex;
-    width: 100%;
-    height: 90vh;
+  display: flex;
+  width: 100%;
+  height: 90vh;
 }
 
 .offerCardsMainContainer {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    overflow: hidden;
-    margin-top: -200px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  overflow: hidden;
+  margin-top: -200px;
 }
 
 .OfferSliderButtonsPrv {
-    margin-right: "20px";
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-    background-color: white;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  background-color: white;
 }
 
 .OfferSliderButtonsNxt {
-    margin-left: 20px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-    background-color: white;
-
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  background-color: white;
 }
 
 .offerCards-data {
-    display: flex;
-    width: 80%;
-    height: 300px;
-
+  display: flex;
+  width: 80%;
+  height: 300px;
+  justify-content: space-around;
+  /* HERE */
 }
 
 .OfferCardSection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 50px;
 }
 
 .SingleCardBlock {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .singleCardOffer {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    background-color: white;
-    height: 330px;
-    overflow: hidden;
-    border-radius: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: white;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .cardButtonSection {
-
-    display: flex;
-    justify-content: space-evenly;
-    background-color: white;
-    margin-top: -5px;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    border: none;
-    cursor: pointer;
-    align-items: center;
-
-
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-top: -5px;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
 }
 
 .cardButtonOffer {
-    border-radius: "25px";
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 35px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 35px;
+}
 
+.skeleton {
+  background-color: #e0e0e0;
+  animation: shimmer 1s infinite linear alternate;
+}
 
+.skeleton-img {
+  width: 100%;
+  height: 75%;
+  background-color: #e0e0e0;
+  margin-bottom: 15px;
+  filter: brightness(1.5);
+  animation: imgOpacity 1s infinite linear alternate;
+}
+
+@keyframes imgOpacity {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.skeleton-text {
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.skeleton-text-large {
+  width: 60%;
+  height: 20px;
+}
+
+.skeleton-text-small {
+  width: 80%;
+  height: 20px;
+}
+
+.skeleton-button {
+  width: 100px;
+  height: 35px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-position: 468px 0;
+    background-color: hsl(200, 20%, 95%);
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .offerCardsMainContainer {
-        display: flex;
-        padding: 0;
-    }
+  .offerCardsMainContainer {
+    display: flex;
+    padding: 0;
+  }
 
-    .OfferSliderButtonsPrv {
-        margin-right: -30px;
-    }
+  .OfferSliderButtonsPrv {
+    margin-right: -30px;
+  }
 
-    .OfferSliderButtonsNxt {
-        margin-left: 50px;
-    }
+  .OfferSliderButtonsNxt {
+    margin-left: 50px;
+  }
 
-    .OfferCardSection {
-        display: block;
-    }
+  .OfferCardSection {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-    .offerCardsMainContainer {
-        display: flex;
-        padding: 0;
-    }
+  .offerCardsMainContainer {
+    display: flex;
+    padding: 0;
+  }
 
-    .OfferSliderButtonsPrv {
-        margin-right: -30px;
-    }
+  .OfferSliderButtonsPrv {
+    margin-right: -30px;
+  }
 
-    .OfferSliderButtonsNxt {
-        margin-left: 50px;
-    }
+  .OfferSliderButtonsNxt {
+    margin-left: 50px;
+  }
 
-    .OfferCardSection {
-        display: block;
-    }
+  .OfferCardSection {
+    display: block;
+  }
 }

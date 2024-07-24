@@ -5,7 +5,7 @@ import Navbar from "./pages/navbar/Navbar";
 import CustomDrawer from "./components/drawer/Drawer";
 import Footer from "./pages/footer/Footer";
 import AllRoutes from "./routes/AllRoutes";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       {burger ? (
         <CustomDrawer
           isOpen={burger}
@@ -42,7 +42,7 @@ function App() {
       <AllRoutes purchase={purchase} setPurchase={setPurchase} />
 
       <ToastContainer
-        position='top-right'
+        position="top-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -51,7 +51,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme='colored'
+        theme="colored"
       />
       <Footer />
     </div>
