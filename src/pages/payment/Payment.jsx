@@ -1,8 +1,7 @@
 // PaymentModal.jsx
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Style.css";
 import placed from "../../assets/OrderPlaced.gif";
-import kfc from "../../assets/bucket_cart_icon.svg";
 
 import {
   Modal,
@@ -38,13 +37,13 @@ const Payment = ({ isOpen, onClose, trigger }) => {
           <Flex justifyContent={"center"} minH={400} alignItems={"center"}>
             {spinner ? (
               <Flex flexDirection={"column"} alignItems={"center"} gap={5}>
-                <img src={placed} alt='Order Placed' />
+                <img src={placed} alt="Order Placed" />
                 <Heading fontSize={25}>Order Placed Successfully🍿</Heading>
               </Flex>
             ) : (
               <Flex flexDirection={"column"} alignItems={"center"} gap={5}>
                 {" "}
-                <div class='custom-Payment'></div> Your transaction is being
+                <div class="custom-Payment"></div> Your transaction is being
                 processed
               </Flex>
             )}

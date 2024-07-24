@@ -6,26 +6,28 @@ import Landing from "../pages/landingPage/Landing";
 import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
 import Checkout from "../pages/checkout/Checkout";
+import NotFound from "../pages/404/NotFound";
 
 const AllRoutes = ({ purchase, setPurchase }) => {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route
-          path='/menu'
+          path="/menu"
           element={<Menu setPurchase={setPurchase} purchase={purchase} />}
         />
-        <Route path='/offers' element={<Offer />} />
+        <Route path="/offers" element={<Offer />} />
         <Route
-          path='/cart'
+          path="/cart"
           element={<Cart purchase={purchase} setPurchase={setPurchase} />}
         />
-        <Route path='/login' element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route
-          path='/checkout'
+          path="/checkout"
           element={<Checkout purchase={purchase} setPurchase={setPurchase} />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -40,7 +40,7 @@ const PayModal = ({ setPayType, payType, userData }) => {
   return (
     <>
       {payType === "" ? (
-        <button onClick={validation} className='checkout-form-submit'>
+        <button onClick={validation} className="checkout-form-submit">
           Select Payment
         </button>
       ) : (
@@ -55,49 +55,49 @@ const PayModal = ({ setPayType, payType, userData }) => {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <div className='PayModal-parent'>
-              <div className='PayModal-child'>
+            <div className="PayModal-parent">
+              <div className="PayModal-child">
                 <label>
                   <input
-                    type='radio'
-                    name='paymentOption'
-                    value='Card'
+                    type="radio"
+                    name="paymentOption"
+                    value="Card"
                     onChange={handleChange}
                   />
-                  <span className='lable-name'>Credit/Debit Card</span>
+                  <span className="lable-name">Credit/Debit Card</span>
                 </label>
               </div>
-              <div className='PayModal-child'>
+              <div className="PayModal-child">
                 <label>
                   <input
-                    type='radio'
-                    name='paymentOption'
-                    value='Netbanking'
+                    type="radio"
+                    name="paymentOption"
+                    value="Netbanking"
                     onChange={handleChange}
                   />
-                  <span className='lable-name'>Netbanking</span>
+                  <span className="lable-name">Netbanking</span>
                 </label>
               </div>
-              <div className='PayModal-child'>
+              <div className="PayModal-child">
                 <label>
                   <input
-                    type='radio'
-                    name='paymentOption'
-                    value='Cash'
+                    type="radio"
+                    name="paymentOption"
+                    value="Cash"
                     onChange={handleChange}
                   />
-                  <span className='lable-name'>Cash</span>
+                  <span className="lable-name">Cash</span>
                 </label>
               </div>
-              <div className='PayModal-child'>
+              <div className="PayModal-child">
                 <label>
                   <input
-                    type='radio'
-                    name='paymentOption'
-                    value='UPI'
+                    type="radio"
+                    name="paymentOption"
+                    value="UPI"
                     onChange={handleChange}
                   />
-                  <span className='lable-name'>UPI</span>
+                  <span className="lable-name">UPI</span>
                 </label>
               </div>
             </div>
@@ -105,7 +105,7 @@ const PayModal = ({ setPayType, payType, userData }) => {
 
           <ModalFooter justifyContent={"center"}>
             <Button
-              colorScheme='blue'
+              colorScheme="blue"
               mr={3}
               onClick={handleSubmit}
               pl={10}

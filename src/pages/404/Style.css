@@ -1,0 +1,36 @@
+.error-container {
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgba(255, 217, 70, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.errorImg {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.error-container > h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.error-container > button {
+  background-color: #c8201e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #a81715;
+}

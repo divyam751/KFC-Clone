@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Style.css";
 import { useNavigate } from "react-router-dom";
 import imgPlaceholder from "../../assets/placeholder.webp";
-import Loader from "../loader/Loader";
 
 const SkeletonCard = () => (
   <div className="SingleCardBlock">

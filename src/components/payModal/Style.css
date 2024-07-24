@@ -1,69 +1,67 @@
 ModalOverlay {
-    z-index: 100;
-    display: flex;
-    width: 400px;
-    padding-top: 400px;
-    background-color: white;
+  z-index: 100;
+  display: flex;
+  width: 400px;
+  padding-top: 400px;
+  background-color: white;
 }
 
 .checkout-form-submit {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 80px 10px 80px;
-    border-radius: 60px;
-    background-color: #E4002B;
-    color: white;
-    border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 80px 10px 80px;
+  border-radius: 60px;
+  background-color: #e4002b;
+  color: white;
+  border: none;
 }
 
 .checkout-form-submit:hover {
-    background-color: green;
-    zoom: 120%;
-    cursor: pointer;
+  background-color: green;
+  zoom: 120%;
+  cursor: pointer;
 }
 
 .PayModal-parent {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .PayModal-child {
-    display: flex;
-    font-size: 15px;
-    width: 100%;
-    height: 70px;
-    background-color: whitesmoke;
-    padding-left: 30px;
-    align-items: center;
-    font-weight: bold;
-    gap: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+  display: flex;
+  font-size: 15px;
+  width: 100%;
+  height: 70px;
+  background-color: whitesmoke;
+  padding-left: 30px;
+  align-items: center;
+  font-weight: bold;
+  gap: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .lable-name {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 500px) {
-    .checkout-form-submit {
-        font-size: 15;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 40px 10px 40px;
-        border-radius: 60px;
-        background-color: #E4002B;
-        color: white;
-        border: none;
-    }
+  .checkout-form-submit {
+    font-size: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px 10px 40px;
+    border-radius: 60px;
+    background-color: #e4002b;
+    color: white;
+    border: none;
+  }
 
-    .checkout-form-submit:hover {
-        background-color: green;
-        cursor: pointer;
-    }
+  .checkout-form-submit:hover {
+    background-color: green;
+    cursor: pointer;
+  }
 }

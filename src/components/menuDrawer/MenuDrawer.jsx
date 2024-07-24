@@ -18,7 +18,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 function CustomDrawer({ isOpen, onClose, cartIconCount }) {
   return (
-    <Drawer isOpen={isOpen} onClose={onClose} size='full' placement='left'>
+    <Drawer isOpen={isOpen} onClose={onClose} size="full" placement="left">
       <DrawerOverlay />
       <DrawerContent
         style={{
@@ -42,50 +42,50 @@ function CustomDrawer({ isOpen, onClose, cartIconCount }) {
               border: "none",
             }}
           />
-          <img src={logo} alt='' />
-          <div className='bucketCartItems'>
-            <button className='headerIconButtons'>
-              <div className='cartIcon'>
-                <img src={cartBucketIcon} alt='bucketIcon' />
-                <div className='cartIconCount'>{cartIconCount}</div>
+          <img src={logo} alt="" />
+          <div className="bucketCartItems">
+            <button className="headerIconButtons">
+              <div className="cartIcon">
+                <img src={cartBucketIcon} alt="bucketIcon" />
+                <div className="cartIconCount">{cartIconCount}</div>
               </div>
             </button>
           </div>
         </DrawerHeader>
         <DrawerBody width={"90%"} p={20}>
-          <div className='mobileNavContainer'>
-            <div className='title-Text'>LET'S GET COOKIN'</div>
-            <div className='mobileNavAccount'>
-              <button className='signInButton'>
-                <img src={accountIcon} alt='account Icon' />
+          <div className="mobileNavContainer">
+            <div className="title-Text">LET'S GET COOKIN'</div>
+            <div className="mobileNavAccount">
+              <button className="signInButton">
+                <img src={accountIcon} alt="account Icon" />
                 Sign In / Sign Up <BsArrowRight />
               </button>
             </div>
-            <div className='mobileNav'>
-              <a href='/menu' className='mobile-component-link'>
+            <div className="mobileNav">
+              <a href="/menu" className="mobile-component-link">
                 Menu
               </a>
-              <div className='mobileNavImages'>
+              <div className="mobileNavImages">
                 <img
                   src={menuBurger}
-                  alt='menuBurger'
-                  className='mobileNavImages'
+                  alt="menuBurger"
+                  className="mobileNavImages"
                 />
               </div>
             </div>
-            <div className='mobileNav'>
-              <a href='/offers' className='mobile-component-link'>
+            <div className="mobileNav">
+              <a href="/offers" className="mobile-component-link">
                 Deals
               </a>
-              <div className='mobileNavImages'>
+              <div className="mobileNavImages">
                 <img
                   src={offerImg}
-                  alt='offerImg'
-                  className='mobileNavImages'
+                  alt="offerImg"
+                  className="mobileNavImages"
                 />
               </div>
             </div>
-            <div className='mobileFooterNav'>
+            <div className="mobileFooterNav">
               <p>Get Help</p>
               <p>Contact Us</p>
               <p>KFC Feedback</p>
