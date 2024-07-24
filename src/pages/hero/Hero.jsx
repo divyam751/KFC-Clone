@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 import Carousel from "../../components/carousel/Carousel";
 import lineImg from "../../assets/mobileLogo.png";
-import axios from "axios";
+// import axios from "axios";
 import Categories from "../../components/categoriesCard/Categories";
 import { useNavigate } from "react-router-dom";
+import categories from "./categories";
 
 const Hero = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -16,14 +17,16 @@ const Hero = () => {
   };
   const fethData = () => {
     setLoading(true);
-    try {
-      axios
-        .get("https://kfc-2yef.onrender.com/categories")
-        .then((res) => setData(res.data))
-        .finally(setLoading(false));
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   axios
+    //     .get("https://kfc-2yef.onrender.com/categories")
+    //     .then((res) => setData(res.data))
+    //     .finally(setLoading(false));
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    setData(categories);
+    setLoading(false);
   };
 
   useEffect(() => {

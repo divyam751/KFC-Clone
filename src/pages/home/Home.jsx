@@ -3,7 +3,6 @@ import "./Style.css";
 import redLines from "../../assets/mobileLogo.png";
 import OffersCards from "../../components/carouselOffers/OffersCards";
 import axios from "axios";
-import Loader from "../../components/loader/Loader";
 
 const Home = () => {
   const [cardData, setCardData] = useState([]);

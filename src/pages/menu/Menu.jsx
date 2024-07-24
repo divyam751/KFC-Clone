@@ -5,10 +5,10 @@ import linesLogo from "../../assets/mobileLogo.png";
 import { BsSearch } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
 import Card1 from "./menuCards/card1/Card1";
-import axios from "axios";
 import Card2 from "./menuCards/card2/Card2";
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import MobSearch from "../../components/mobSearch/MobSearch";
+import menu from "./data";
 
 const Menu = ({ setPurchase, purchase }) => {
   const [cardData, setCardData] = useState([]);
@@ -30,16 +30,14 @@ const Menu = ({ setPurchase, purchase }) => {
     setIsDrawerOpen(false);
   };
 
-  const fetchData = async () => {
-    setLoading(true);
-    await axios
-      .get("https://kfc-2yef.onrender.com/menu")
-      .then((res) => setCardData(res.data))
-      .then(() => setLoading(false));
+  const fetchData = () => {
+    setCardData(menu);
   };
 
   useEffect(() => {
+    setLoading(true);
     fetchData();
+    setLoading(false);
   }, []);
 
   const combinedData = [];
