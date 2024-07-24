@@ -60,6 +60,7 @@ KFC is built using the following technologies:
 ![2](https://github.com/divyam751/kfc/assets/125983433/b12e16d2-2175-46af-989d-6260907ccde4)
 ![3](https://github.com/divyam751/kfc/assets/125983433/9f23cb96-a352-4c10-bb22-e7a63676ce52)
 ![5](https://github.com/divyam751/kfc/assets/125983433/9d3087a2-02d3-4bae-83bc-c7604e532ad2)
+![Screenshot 2024-07-24 164741](https://github.com/user-attachments/assets/cb1c3568-f820-4283-b3d9-4be8619cf970)
 
 
 
